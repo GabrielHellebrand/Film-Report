@@ -1,0 +1,16 @@
+{
+  "week": "1998-01-16",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Good Will Hunting"},
+    { "title": "Fallen"},
+    { "title": "As Good As It Gets"},
+    { "title": "Hard Rain"},
+    { "title": "Half Baked"},
+    { "title": "Wag the Dog"},
+    { "title": "Tomorrow Never Dies"},
+    { "title": "MouseHunt"},
+    { "title": "Amistad"}
+    
+  ]
+}

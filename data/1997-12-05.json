@@ -1,0 +1,15 @@
+{
+  "week": "1997-12-05",
+  "movies": [
+    { "title": "Flubber"},
+    { "title": "Alien Resurrection"},
+    { "title": "The Rainmaker"},
+    { "title": "Anastasia"},
+    { "title": "The Jackal"},
+    { "title": "Midnight In The Garden Of Good And Evil"},
+    { "title": "Mortal Kombat Annihilation"},
+    { "title": "I Know What You Did Last Summer"},
+    { "title": "Bean"},
+    { "title": "Starship Troopers"}
+  ]
+}

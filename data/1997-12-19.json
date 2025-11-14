@@ -1,0 +1,15 @@
+{
+  "week": "1997-12-19",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Tomorrow Never Dies"},
+    { "title": "Scream 2"},
+    { "title": "Amistad"},
+    { "title": "MouseHunt"},
+    { "title": "Flubber"},
+    { "title": "Home Alone 3"},
+    { "title": "For Richer or Poorer"},
+    { "title": "Anastasia"},
+    { "title": "Alien Resurrection"}
+  ]
+}

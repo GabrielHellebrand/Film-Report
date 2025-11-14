@@ -1,0 +1,15 @@
+{
+  "week": "1998-04-03",
+  "movies": [
+    { "title": "Lost in Space"},
+    { "title": "Titanic"},
+    { "title": "Mercury Rising"},
+    { "title": "Grease"},
+    { "title": "Primary Colors"},
+    { "title": "Wild Things"},
+    { "title": "The Man in the Iron Mask"},
+    { "title": "As Good As It Gets"},
+    { "title": "Good Will Hunting"},
+    { "title": "The Newton Boys"}
+  ]
+}

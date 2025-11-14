@@ -1,0 +1,15 @@
+{
+  "week": "1998-02-20",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "The Wedding Singer"},
+    { "title": "Sphere"},
+    { "title": "Good Will Hunting"},
+    { "title": "Senseless"},
+    { "title": "As Good As It Gets"},
+    { "title": "The Borrowers"},
+    { "title": "Palmetto"},
+    { "title": "The Apostle"},
+    { "title": "The Replacement Killers"}    
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "week": "1998-03-13",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "The Man in the Iron Mask"},
+    { "title": "US Marshals"},
+    { "title": "Good Will Hunting"},
+    { "title": "The Wedding Singer"},
+    { "title": "The Big Lebowski"},
+    { "title": "Twilight"},
+    { "title": "Hush"},
+    { "title": "As Good As It Gets"},
+    { "title": "Dark City"}
+  ]
+}

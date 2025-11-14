@@ -1,0 +1,15 @@
+{
+  "week": "1998-03-27",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Grease"},
+    { "title": "Primary Colors"},
+    { "title": "The Man in the Iron Mask"},
+    { "title": "Wild Things"},
+    { "title": "As Good As It Gets"},
+    { "title": "Good Will Hunting"},
+    { "title": "US Marshals"},
+    { "title": "The Newton Boys"},
+    { "title": "Mr Nice Guy"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "week": "1998-03-06",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "US Marshals"},
+    { "title": "The Wedding Singer"},
+    { "title": "Twilight"},
+    { "title": "Hush"},
+    { "title": "The Big Lebowski"},
+    { "title": "Good Will Hunting"},
+    { "title": "As Good As It Gets"},
+    { "title": "Dark City"},
+    { "title": "The Borrowers"}
+  ]
+}

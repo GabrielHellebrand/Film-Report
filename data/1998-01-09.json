@@ -1,0 +1,15 @@
+{
+  "week": "1998-01-09",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Good Will Hunting"},
+    { "title": "As Good As It Gets"},
+    { "title": "Wag the Dog"},
+    { "title": "Tomorrow Never Dies"},
+    { "title": "MouseHunt"},
+    { "title": "Jackie Brown"},
+    { "title": "Scream 2"},
+    { "title": "Amistad"},
+    { "title": "An American Werewolf In Paris"}
+  ]
+}

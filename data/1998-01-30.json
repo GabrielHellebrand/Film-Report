@@ -1,0 +1,15 @@
+{
+  "week": "1998-01-30",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Great Expectations"},
+    { "title": "Good Will Hunting"},
+    { "title": "Spice World"},
+    { "title": "As Good As It Gets"},
+    { "title": "Desperate Measures"},
+    { "title": "Wag the Dog"},
+    { "title": "Deep Rising"},
+    { "title": "Fallen"},
+    { "title": "Hard Rain"}
+  ]
+}

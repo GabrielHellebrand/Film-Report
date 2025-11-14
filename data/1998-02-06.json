@@ -1,0 +1,15 @@
+{
+  "week": "1998-02-06",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "The Replacement Killers"},
+    { "title": "Good Will Hunting"},
+    { "title": "Blues Brothers 2000"},
+    { "title": "Great Expectations"},
+    { "title": "As Good As It Gets"},
+    { "title": "Spice World"},
+    { "title": "Wag the Dog"},
+    { "title": "Desperate Measures"},
+    { "title": "Deep Rising"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "week": "1998-04-10",
+  "movies": [
+    { "title": "City of Angels"},
+    { "title": "Lost in Space"},
+    { "title": "Titanic"},
+    { "title": "Species II"},
+    { "title": "The Players Club"},
+    { "title": "Mercury Rising"},
+    { "title": "The Odd Couple II"},
+    { "title": "Grease"},
+    { "title": "Primary Colors"},
+    { "title": "As Good As It Gets"}
+  ]
+}

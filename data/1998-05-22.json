@@ -1,0 +1,15 @@
+{
+  "week": "1998-05-22",
+  "movies": [
+    { "title": "Godzilla"},
+    { "title": "Deep Impact"},
+    { "title": "The Horse Whisperer"},
+    { "title": "Bulworth"},
+    { "title": "Quest for Camelot"},
+    { "title": "Fear and Loathing In Las Vegas"},
+    { "title": "Titanic"},
+    { "title": "City of Angels"},
+    { "title": "He Got Game"},
+    { "title": "Paulie"}
+  ]
+}

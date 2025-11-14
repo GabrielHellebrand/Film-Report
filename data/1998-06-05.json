@@ -1,0 +1,15 @@
+{
+  "week": "1998-06-05",
+  "movies": [
+    { "title": "The Truman Show"},
+    { "title": "A Perfect Murder"},
+    { "title": "Godzilla"},
+    { "title": "Hope Floats"},
+    { "title": "Deep Impact"},
+    { "title": "The Horse Whisperer"},
+    { "title": "Bulworth"},
+    { "title": "Titanic"},
+    { "title": "I Got the Hook Up"},
+    { "title": "Quest for Camelot"}
+  ]
+}

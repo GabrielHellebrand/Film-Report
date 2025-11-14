@@ -1,0 +1,15 @@
+{
+  "week": "1998-05-29",
+  "movies": [
+    { "title": "Godzilla"},
+    { "title": "Hope Floats"},
+    { "title": "Deep Impact"},
+    { "title": "The Horse Whisperer"},
+    { "title": "Bulworth"},
+    { "title": "I Got the Hook Up"},
+    { "title": "Quest for Camelot"},
+    { "title": "Titanic"},
+    { "title": "Fear and Loathing In Las Vegas"},
+    { "title": "City of Angels"}
+  ]
+}

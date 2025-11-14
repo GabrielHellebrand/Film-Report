@@ -1,0 +1,15 @@
+{
+  "week": "1997-09-12",
+  "movies": [
+    { "title": "The Game"},
+    { "title": "GI Jane"},
+    { "title": "Fire Down Below"},
+    { "title": "Money Talks"},
+    { "title": "The Full Monty"},
+    { "title": "Air Force One"},
+    { "title": "Hoodlum"},
+    { "title": "Conspiracy Theory"},
+    { "title": "Excess Baggage"},
+    { "title": "Mimic"}
+  ]
+}

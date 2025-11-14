@@ -1,0 +1,15 @@
+{
+  "week": "1998-01-02",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Tomorrow Never Dies"},
+    { "title": "As Good As It Gets"},
+    { "title": "MouseHunt"},
+    { "title": "Scream 2"},
+    { "title": "Jackie Brown"},
+    { "title": "Amistad"},
+    { "title": "An American Werewolf In Paris"},
+    { "title": "Flubber"},
+    { "title": "Mr Magoo"}
+  ]
+}

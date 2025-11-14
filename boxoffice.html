@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Report</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="week-nav">
+        <h1 id="weekLabel" data-week="1997-08-22">August 22, 1997</h1>
+    </div>
+    <div class="box-office">
+        <div class="controls-size">
+            <label>Weekend:</label>
+            <button id="prevWeekend" aria-label="Previous weekend" class="nav-arrow">‹</button>
+            <input type="date" id="weekPicker" class="week-picker" aria-label="Pick weekend date">
+            <button id="nextWeekend" aria-label="Next weekend" class="nav-arrow">›</button>
+            <button id="toggleView" class="view-toggle">Marquee View</button>
+        </div>
+        
+        <!-- Carousel Navigation - Side Arrows -->
+        <ul></ul>
+    </div>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

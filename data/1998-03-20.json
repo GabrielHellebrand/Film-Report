@@ -1,0 +1,15 @@
+{
+  "week": "1998-03-20",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "Primary Colors"},
+    { "title": "The Man in the Iron Mask"},
+    { "title": "Wild Things"},
+    { "title": "US Marshals"},
+    { "title": "Mr Nice Guy"},
+    { "title": "Good Will Hunting"},
+    { "title": "As Good As It Gets"},
+    { "title": "The Wedding Singer"},
+    { "title": "The Big Lebowski"}
+  ]
+}

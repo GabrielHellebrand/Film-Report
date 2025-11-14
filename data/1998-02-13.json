@@ -1,0 +1,15 @@
+{
+  "week": "1998-02-13",
+  "movies": [
+    { "title": "Titanic"},
+    { "title": "The Wedding Singer"},
+    { "title": "Sphere"},
+    { "title": "Good Will Hunting"},
+    { "title": "As Good As It Gets"},
+    { "title": "The Borrowers"},
+    { "title": "The Replacement Killers"},
+    { "title": "Great Expectations"},
+    { "title": "Blues Brothers 2000"},
+    { "title": "The Apostle"}
+  ]
+}
