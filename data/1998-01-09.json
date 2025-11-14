@@ -3,13 +3,13 @@
   "movies": [
     { "title": "Titanic"},
     { "title": "Good Will Hunting"},
-    { "title": "As Good As It Gets"},
+    { "title": "As Good as It Gets"},
     { "title": "Wag the Dog"},
     { "title": "Tomorrow Never Dies"},
-    { "title": "MouseHunt"},
+    { "title": "Mousehunt"},
     { "title": "Jackie Brown"},
     { "title": "Scream 2"},
     { "title": "Amistad"},
-    { "title": "An American Werewolf In Paris"}
+    { "title": "An American Werewolf in Paris"}
   ]
 }

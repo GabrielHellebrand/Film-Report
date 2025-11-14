@@ -2,7 +2,7 @@
   "week": "1998-04-17",
   "movies": [
     { "title": "City of Angels"},
-    { "title": "The Object of my Affection"},
+    { "title": "The Object of My Affection"},
     { "title": "Lost in Space"},
     { "title": "Titanic"},
     { "title": "Paulie"},
@@ -10,6 +10,6 @@
     { "title": "The Odd Couple II"},
     { "title": "Mercury Rising"},
     { "title": "The Players Club"},
-    { "title": "As Good As It Gets"}
+    { "title": "As Good as It Gets"}
   ]
 }
