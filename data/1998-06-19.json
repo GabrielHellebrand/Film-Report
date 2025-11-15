@@ -1,15 +1,15 @@
 {
-  "week": "1998-06-12",
+  "week": "1998-06-19",
   "movies": [
+    { "title": "The X Files"},
+    { "title": "Mulan"},
     { "title": "The Truman Show"},
     { "title": "Six Days Seven Nights"},
     { "title": "A Perfect Murder"},
     { "title": "Cant Hardly Wait"},
-    { "title": "Godzilla"},
     { "title": "Hope Floats"},
+    { "title": "Godzilla"},
     { "title": "Deep Impact"},
-    { "title": "The Horse Whisperer"},
-    { "title": "Titanic"},
-    { "title": "Bulworth"}
+    { "title": "The Horse Whisperer"}
   ]
 }

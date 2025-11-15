@@ -128,6 +128,10 @@
     'A Perfect Murder': {runtime: 107, rating: 'R'},
     'Six Days, Seven Nights': {runtime: 102, rating: 'PG-13'},
     'Cant Hardly Wait': {runtime: 100, rating: 'PG-13'},
+    'The X-Files': {runtime: 121, rating: 'PG-13'},
+    'Mulan': {runtime: 88, rating: 'G'},
+    'Doctor Dolittle': {runtime: 85, rating: 'PG-13'},
+    'Out of Sight': {runtime: 123, rating: 'R'},
     
     
   };

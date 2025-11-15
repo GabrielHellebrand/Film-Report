@@ -1,8 +1,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 /* dark burgundy background */
-body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:#f3e9e9; padding:24px; display:flex; justify-content:center}
+body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:#f3e9e9; padding: 8px; display:flex; justify-content:center}
 
-.box-office{max-width:1400px; width:100%;position:relative}
+.box-office{max-width:2000px; width:100%;position:relative}
 .week-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
 .week-nav h1{display:none}
 .nav-arrow{background:#c0c0c0;border:0;color:#3b0f0f;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:20px}
@@ -20,7 +20,18 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .box-office li{display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px;position:relative;cursor:pointer;transition:transform 0.3s ease}
 .box-office li:hover{transform:scale(1.00);z-index:10}
 
-.box-office img{width:100%;max-width:520px;aspect-ratio:27/40;object-fit:cover;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.12);border:4px solid #c0c0c0;padding:2px;background-clip:padding-box}
+.box-office img{
+    width:100% !important;
+    max-width:400px !important;
+    min-width:400px !important;
+    aspect-ratio:27/40;
+    object-fit:cover;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    border:4px solid #c0c0c0;
+    padding:2px;
+    background-clip:padding-box;
+}
 
 /* Box office position number */
 .position-number{background:#000000;color:#ffd700;font-size:24px;font-weight:bold;padding:8px 16px;border-radius:6px;border:2px solid #c0c0c0;margin-top:8px;text-align:center;min-width:50px}
@@ -34,7 +45,7 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .overlay-line strong{color:#ffd700}
 
 /* Marquee View Styles - AMC Theater Style */
-.box-office ul.marquee-view{display:block;max-height:700px;overflow-y:auto;padding:0;background:#1a1a1a;border-radius:0;border:8px solid #333}
+.box-office ul.marquee-view{display:block;max-height:1400px;overflow-y:auto;padding:0;background:#1a1a1a;border-radius:0;border:8px solid #333}
 
 .marquee-item{display:block;padding:20px 30px;margin:0;background:#000000;border-bottom:3px solid #333;transition:all 0.3s ease;position:relative}
 .marquee-item:hover{background:#1a0a0a}
@@ -58,9 +69,9 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .controls-size #togglePostersOnly{background:#c0c0c0;color:#3b0f0f;padding:6px 10px;border-radius:6px;cursor:pointer}
 
 /* size modifiers */
-.box-office.size-small img{max-width:400px}
-.box-office.size-medium img{max-width:520px}
-.box-office.size-large img{max-width:640px}
+.box-office.size-small img{max-width:800px}
+.box-office.size-medium img{max-width:1020px}
+.box-office.size-large img{max-width:1280px}
 
 /* Scrollbar styling for marquee view */
 .box-office ul.marquee-view::-webkit-scrollbar{width:14px}
@@ -68,7 +79,7 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .box-office ul.marquee-view::-webkit-scrollbar-thumb{background:#d4af37;border-radius:7px}
 .box-office ul.marquee-view::-webkit-scrollbar-thumb:hover{background:#f4cf57}
 
-@media (max-width:1400px){ .box-office ul{grid-template-columns:repeat(4, 1fr);} }
-@media (max-width:1100px){ .box-office ul{grid-template-columns:repeat(3, 1fr);} .marquee-item{padding:15px 20px} .marquee-position{left:20px;width:40px;height:40px;font-size:22px} .marquee-info{margin-left:70px} .marquee-showtimes{margin-left:70px} }
-@media (max-width:800px){ .box-office ul{grid-template-columns:repeat(2, 1fr);} }
-@media (max-width:480px){ .box-office ul{grid-template-columns:repeat(1, 1fr);} .marquee-title{font-size:20px} .showtime{font-size:16px;padding:8px 14px} .marquee-meta{font-size:14px} }
+@media (max-width:1400px){ .box-office ul{grid-template-columns:repeat(5, 1fr);} }
+@media (max-width:1100px){ .box-office ul{grid-template-columns:repeat(4, 1fr);} .marquee-item{padding:15px 20px} .marquee-position{left:20px;width:40px;height:40px;font-size:22px} .marquee-info{margin-left:70px} .marquee-showtimes{margin-left:70px} }
+@media (max-width:800px){ .box-office ul{grid-template-columns:repeat(3, 1fr);} }
+@media (max-width:480px){ .box-office ul{grid-template-columns:repeat(2, 1fr);} .marquee-title{font-size:20px} .showtime{font-size:16px;padding:8px 14px} .marquee-meta{font-size:14px} }
