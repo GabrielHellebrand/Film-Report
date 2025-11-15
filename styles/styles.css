@@ -15,15 +15,15 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .view-toggle:active{transform:translateY(1px)}
 
 /* layout - 5 items in a row */
-.box-office ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5, 1fr);gap:20px;row-gap:1px; align-items:start}
+.box-office ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5, 1fr);gap:10px;row-gap:2px; align-items:start}
 
-.box-office li{display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px;position:relative;cursor:pointer;transition:transform 0.3s ease}
+.box-office li{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px;position:relative;cursor:pointer;transition:transform 0.3s ease}
 .box-office li:hover{transform:scale(1.00);z-index:10}
 
 .box-office img{
     width:100% !important;
-    max-width:400px !important;
-    min-width:400px !important;
+    max-width:350px !important;
+    min-width:350px !important;
     aspect-ratio:27/40;
     object-fit:cover;
     border-radius:6px;
@@ -34,7 +34,7 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 }
 
 /* Box office position number */
-.position-number{background:#000000;color:#ffd700;font-size:24px;font-weight:bold;padding:8px 16px;border-radius:6px;border:2px solid #c0c0c0;margin-top:8px;text-align:center;min-width:50px}
+.position-number{background:#000000;color:#ffd700;font-size:24px;font-weight:bold;padding:8px 16px;border-radius:6px;border:2px solid #c0c0c0;margin-top:0px;text-align:center;min-width:50px}
 
 /* Hover overlay - hidden by default */
 .hover-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.92);color:white;padding:20px;border-radius:6px;opacity:0;transition:opacity 0.3s ease;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
