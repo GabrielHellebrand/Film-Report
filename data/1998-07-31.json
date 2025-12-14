@@ -1,0 +1,15 @@
+{
+  "week": "1998-07-31",
+  "movies": [
+    { "title": "Saving Private Ryan"},
+    { "title": "The Parent Trap"},
+    { "title": "Theres Something About Mary"},
+    { "title": "The Negotiator"},
+    { "title": "Ever After A Cinderella Story"},
+    { "title": "The Mask of Zorro"},
+    { "title": "Lethal Weapon 4"},
+    { "title": "Armageddon"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Mafia"}
+  ]
+}

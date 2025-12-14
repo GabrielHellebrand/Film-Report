@@ -1,0 +1,15 @@
+{
+  "week": "1998-07-03",
+  "movies": [
+    { "title": "Armageddon"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Mulan"},
+    { "title": "Out of Sight"},
+    { "title": "The X Files"},
+    { "title": "The Truman Show"},
+    { "title": "Six Days Seven Nights"},
+    { "title": "A Perfect Murder"},
+    { "title": "Hope Floats"},
+    { "title": "The Horse Whisperer"}
+  ]
+}

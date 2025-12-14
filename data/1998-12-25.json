@@ -1,0 +1,15 @@
+{
+  "week": "1998-12-25",
+  "movies": [
+    { "title": "Patch Adams"},
+    { "title": "Stepmom"},
+    { "title": "Youve Got Mail"},
+    { "title": "The Prince of Egypt"},
+    { "title": "The Faculty"},
+    { "title": "Mighty Joe Young"},
+    { "title": "A Bugs Life"},
+    { "title": "Star Trek Insurrection"},
+    { "title": "Enemy of the State"},
+    { "title": "Jack Frost"}
+  ]
+}

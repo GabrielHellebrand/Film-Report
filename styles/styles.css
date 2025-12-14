@@ -1,8 +1,89 @@
 *{box-sizing:border-box;margin:0;padding:0}
-/* dark burgundy background */
-body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:#f3e9e9; padding: 8px; display:flex; justify-content:center}
 
-.box-office{max-width:2000px; width:100%;position:relative}
+/* AMC theater exterior wall */
+body{
+  /* Brick wall background */
+  background-color: #6b6b6b;
+  background-image: 
+    /* Mortar lines - horizontal */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 29px,
+      #8a8a8a 29px,
+      #8a8a8a 31px
+    ),
+    /* Mortar lines - vertical with offset pattern */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 59px,
+      #8a8a8a 59px,
+      #8a8a8a 61px
+    ),
+    /* Brick texture and variation */
+    repeating-linear-gradient(
+      0deg,
+      #5a5a5a 0px,
+      #6b6b6b 15px,
+      #5a5a5a 30px
+    );
+  background-size: 100% 31px, 121px 100%, 100% 100%;
+  background-position: 0 0, 0 0, 0 0;
+  
+  font-family: Arial, Helvetica, sans-serif; 
+  color:#f3e9e9; 
+  padding: 8px; 
+  display:flex; 
+  justify-content:center;
+  position: relative;
+}
+
+/* Add texture overlay for brick surface detail */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Fine grain texture */
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      rgba(0,0,0,0.02) 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      rgba(0,0,0,0.02) 1px,
+      transparent 2px
+    ),
+    /* Random noise pattern */
+    repeating-radial-gradient(
+      circle at 20% 30%,
+      rgba(0,0,0,0.03) 0px,
+      transparent 1px
+    ),
+    repeating-radial-gradient(
+      circle at 60% 70%,
+      rgba(0,0,0,0.03) 0px,
+      transparent 1px
+    );
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.box-office{
+  max-width:100%; 
+  width:100%;
+  position:relative;
+  z-index: 1;
+}
+
 .week-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
 .week-nav h1{display:none}
 .nav-arrow{background:#c0c0c0;border:0;color:#3b0f0f;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:20px}
@@ -15,71 +96,427 @@ body{background-color:#3b0f0f; font-family: Arial, Helvetica, sans-serif; color:
 .view-toggle:active{transform:translateY(1px)}
 
 /* layout - 5 items in a row */
-.box-office ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5, 1fr);gap:10px;row-gap:2px; align-items:start}
+.box-office ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:10px;
+    row-gap:20px; 
+    align-items:start;
+    justify-items: center;
+}
 
-.box-office li{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px;position:relative;cursor:pointer;transition:transform 0.3s ease}
-.box-office li:hover{transform:scale(1.00);z-index:10}
+.box-office li {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+}
 
-.box-office img{
-    width:100% !important;
-    max-width:350px !important;
-    min-width:350px !important;
-    aspect-ratio:27/40;
-    object-fit:cover;
-    border-radius:6px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12);
-    border:4px solid #c0c0c0;
-    padding:2px;
-    background-clip:padding-box;
+.box-office li img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 27/40;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    
+    /* Subtle brightness boost to simulate backlight on poster */
+    filter: brightness(1.05) contrast(1.05);
+    
+    transition: filter 0.3s ease;
+}
+
+/* Enhanced Hover Effect - Applied to the wrapper instead of li */
+.poster-wrapper:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 
+        inset 0 0 40px rgba(255, 200, 100, 0.5),
+        inset 0 0 80px rgba(255, 165, 0, 0.3),
+        0 0 60px rgba(255, 165, 0, 0.8),
+        0 25px 80px rgba(0, 0, 0, 1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.poster-wrapper::before {
+    content:none;
+}
+
+.poster-wrapper img {
+    width: 100%;
+    display: block;
+    border: none;
+    margin: 0;
+}
+
+.poster-wrapper:hover img {
+    filter: brightness(1.1) contrast(1.08);
+}
+
+.poster-now-showing {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 6px 0;
+    text-align: center;
+    color: #ffd700;
+    font-size: 13px; 
+    font-weight: 900;
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+    
+    background: linear-gradient(180deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 215, 0, 0.4),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+    
+    z-index: 2;
+    box-shadow: 
+        0 2px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 215, 0, 0.4);
+    
+    user-select: none; 
+    transition: all 0.3s ease;
+    
+    box-sizing: border-box;
+    flex-shrink: 0;
+    
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.03) 1px,
+            rgba(0, 0, 0, 0.03) 2px
+        );
+}
+
+.poster-wrapper:hover .poster-now-showing {
+    background: linear-gradient(180deg, #ffed4e 0%, #fff9a3 50%, #ffed4e 100%);
+    box-shadow: 
+        0 3px 0 rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 0 30px rgba(255, 215, 0, 0.9),
+        0 0 50px rgba(255, 215, 0, 0.6);
+    text-shadow: 
+        0 0 15px rgba(255, 215, 0, 1),
+        0 0 25px rgba(255, 215, 0, 0.8),
+        0 0 35px rgba(255, 215, 0, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.now-showing-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollMarquee 15s linear infinite; 
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Poster wrapper */
+.poster-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    border: 8px solid #0a0a0a;
+    border-radius: 2px;
+    background: #0a0a0a;
+    overflow: hidden;
+    
+    width: 100%;
+    max-width: 350px;
+    
+    box-shadow: 
+        inset 0 0 30px rgba(255, 200, 100, 0.3),
+        inset 0 0 60px rgba(255, 165, 0, 0.2),
+        0 0 40px rgba(255, 165, 0, 0.5),
+        0 20px 60px rgba(0, 0, 0, 0.9),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    
+    transition: all 0.3s ease;
 }
 
 /* Box office position number */
-.position-number{background:#000000;color:#ffd700;font-size:24px;font-weight:bold;padding:8px 16px;border-radius:6px;border:2px solid #c0c0c0;margin-top:0px;text-align:center;min-width:50px}
+.position-number{
+  background:#000000;
+  color:#ffd700;
+  font-size:24px;
+  font-weight:bold;
+  padding:8px 16px;
+  border-radius:6px;
+  border:2px solid #c0c0c0;
+  min-width:50px;
+  text-align:center;
+}
 
-/* Hover overlay - hidden by default */
-.hover-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.92);color:white;padding:20px;border-radius:6px;opacity:0;transition:opacity 0.3s ease;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
-.box-office li:hover .hover-overlay{opacity:1}
+/* Hover overlay */
+.hover-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.92);
+  color:white;
+  padding:20px;
+  border-radius:6px;
+  opacity:0;
+  transition:opacity 0.3s ease;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  pointer-events:none
+}
+.poster-wrapper:hover .hover-overlay{opacity:1}
 
 .overlay-title{font-size:1.2em;font-weight:bold;margin-bottom:15px;text-align:center;color:#ffd700}
 .overlay-line{margin:5px 0;font-size:0.9em;text-align:center}
 .overlay-line strong{color:#ffd700}
 
-/* Marquee View Styles - AMC Theater Style */
-.box-office ul.marquee-view{display:block;max-height:1400px;overflow-y:auto;padding:0;background:#1a1a1a;border-radius:0;border:8px solid #333}
+/* Headers */
+.marquee-header{
+  font-family:'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-size:72px;
+  color:#ff0000;
+  text-align: center;
+  margin:5px 0;
+  text-shadow:0 0 10px rgba(255,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.8);
+  letter-spacing:2px
+}
 
-.marquee-item{display:block;padding:20px 30px;margin:0;background:#000000;border-bottom:3px solid #333;transition:all 0.3s ease;position:relative}
-.marquee-item:hover{background:#1a0a0a}
-.marquee-item:last-child{border-bottom:none}
+/* Marquee View Styles */
+.box-office ul.marquee-view{
+  display: flex;
+  min-height: calc(100vh - 180px);
+  padding:2px 0px;
+  background:#000;
+  border:5px solid #1a1a1a;
+  position:relative;
+  box-shadow:inset 0 0 10px rgba(255,0,0,0.3), 0 0 10px rgba(0,0,0,0.8);
+}
 
-.marquee-position{position:absolute;left:30px;top:50%;transform:translateY(-50%);background:#d4af37;color:#000;font-size:28px;font-weight:900;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0;box-shadow:0 2px 8px rgba(212,175,55,0.5);font-family:'Arial Black', Arial, sans-serif}
+/* Decorative border lights */
+.box-office ul.marquee-view::before{
+  content:'';
+  position:absolute;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+  border:2px solid #ff0000;
+  border-radius:10px;
+  pointer-events:none;
+  box-shadow:0 0 20px rgba(255,0,0,0.6), inset 0 0 20px rgba(255,0,0,0.3)
+}
 
-.marquee-info{margin-left:80px;margin-bottom:12px}
+.marquee-item {
+    display: block;
+    grid-template-columns: 1000px 1fr;
+    align-items: left;
 
-.marquee-title{font-size:28px;font-weight:900;color:#ffffff;margin-bottom:8px;text-transform:uppercase;letter-spacing:2px;font-family:'Arial Black', Arial, sans-serif;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+    /* full-width bar, no rounding */
+    width: 100%;
+    border-radius: 0;
 
-.marquee-meta{font-size:18px;color:#d4af37;font-weight:700;margin-bottom:12px;letter-spacing:1px}
+    /* AMC dark red→black gradient background */
+    background: linear-gradient(90deg, #2a0000 0%, #000 100%);
 
-.marquee-showtimes{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-left:80px;padding:10px 0}
+    /* remove card look */
+    margin: 0;
+    padding: 15px 25px;
 
-.showtime{background:#d4af37;color:#000;padding:10px 18px;border-radius:4px;font-size:20px;font-weight:900;white-space:nowrap;font-family:'Arial Black', Arial, sans-serif;box-shadow:0 3px 6px rgba(0,0,0,0.4);letter-spacing:1px}
+    /* slight neon glow underline instead of shadow box */
+    box-shadow: 
+        inset 0 -2px 6px rgba(255, 0, 0, 0.4);
+}
 
-.controls-size{display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:12px}
+/* Headers */
+.marquee-header{
+  font-family:'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-size:72px;
+  color:#ff0000;
+  text-align:center;
+  margin:5px 0;
+  text-shadow:0 0 10px rgba(255,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.8);
+  font-weight:normal;
+  letter-spacing:2px
+}
+
+/* Marquee View Styles - Classic Theater Marquee Style */
+.box-office ul.marquee-view {
+    display: flex;
+    flex-direction: column;       /* stack items vertically */
+    width: 100vw;                 /* full viewport width */
+    max-width: 100%;
+    padding: 10px 0;
+    background: #000;
+    border: 5px solid #1a1a1a;
+    box-shadow: inset 0 0 10px rgba(255,0,0,0.3), 0 0 10px rgba(0,0,0,0.8);
+    overflow-x: hidden;           /* prevent horizontal scroll */
+}
+
+/* Decorative border lights effect */
+.box-office ul.marquee-view::before{
+  content:'';
+  position:absolute;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+  border:2px solid #ff0000;
+  border-radius:10px;
+  pointer-events:none;
+  box-shadow:0 0 20px rgba(255,0,0,0.6), inset 0 0 20px rgba(255,0,0,0.3)
+}
+
+.marquee-item{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:5px;
+  align-items:left;
+  padding:2px 5px;
+  margin:2px 5px;
+  background:linear-gradient(90deg, #5c484800 0%, #1a0a0a 50%, #000 100%);
+  border: 10px;
+  border-radius:10px;
+  transition:all 0.3s ease;
+  position:static;
+  box-shadow:0 2px 10px rgba(255,0,0,0.2);
+}
+
+.marquee-item:hover{
+  background:linear-gradient(90deg, #1a0a0a 0%, #2a0a0a 50%, #1a0a0a 100%);
+  box-shadow:0 4px 20px rgba(255,0,0,0.4);
+  transform:scale(1.00)
+}
+
+
+.marquee-info{
+  margin-left:0;
+  margin-bottom:0;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  align-items:flex-start;
+  width:100%;
+}
+
+.marquee-title-rating{
+  font-size:24px;
+  font-weight:900;
+  color:#ff0000;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-family:'Arial Black', Arial, sans-serif;
+  text-shadow:0 0 10px rgba(255,0,0,0.6), 2px 2px 4px rgba(0,0,0,0.8);
+  white-space:nowrap;
+  display:inline-block;
+}
+
+.marquee-title-rating-wrapper{
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+
+@keyframes marqueeScroll {
+  0% { 
+    transform: translateX(100%);
+  }
+  100% { 
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-meta{
+  font-size:12px;
+  color:#ff0000;
+  font-weight:700;
+  margin-bottom:0;
+  letter-spacing:2px;
+  text-shadow:0 0 8px rgba(255,0,0,0.5)
+}
+
+/* Flickering animation for marquee showtimes */
+@keyframes flickerGold {
+    0% { opacity: 0.8; text-shadow: 0 0 6px #ffd700, 0 0 12px #fff200; }
+    25% { opacity: 1; text-shadow: 0 0 8px #ffd700, 0 0 16px #fff200; }
+    50% { opacity: 0.85; text-shadow: 0 0 6px #ffd700, 0 0 12px #fff200; }
+    75% { opacity: 0.95; text-shadow: 0 0 10px #ffd700, 0 0 18px #fff200; }
+    100% { opacity: 0.9; text-shadow: 0 0 8px #ffd700, 0 0 14px #fff200; }
+}
+
+/* Apply flicker animation to showtimes */
+.marquee-showtimes .showtime {
+    background: #000;          
+    color: #ffd700;            
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 900;
+    white-space: nowrap;
+    font-family: 'Arial Black', Arial, sans-serif;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6), inset 0 0 8px rgba(255, 215, 0, 0.2);
+    letter-spacing: 1px;
+    border: 2px solid #ffd700;
+    transition: all 0.2s ease;
+    animation: flickerGold 1.5s infinite alternate;
+}
+
+.marquee-showtimes .showtime:hover {
+    color: #fff200;
+    border-color: #fff200;
+    box-shadow: 0 0 12px rgba(255, 255, 0, 0.8), inset 0 0 8px rgba(255, 255, 0, 0.4);
+    animation: flickerGold 0.8s infinite alternate; /* faster flicker on hover */
+}
+
+.controls-size{display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:2px}
 .controls-size button{padding:6px 10px;border-radius:6px;border:0;background:#fdecea;color:#3b0f0f;cursor:pointer}
 .controls-size .nav-arrow{padding:6px 10px;background:#c0c0c0;color:#3b0f0f;border-radius:6px}
 .controls-size #togglePostersOnly{background:#c0c0c0;color:#3b0f0f;padding:6px 10px;border-radius:6px;cursor:pointer}
 
-/* size modifiers */
-.box-office.size-small img{max-width:800px}
-.box-office.size-medium img{max-width:1020px}
-.box-office.size-large img{max-width:1280px}
+/* size modifiers - removed to keep posters uniform */
 
 /* Scrollbar styling for marquee view */
-.box-office ul.marquee-view::-webkit-scrollbar{width:14px}
-.box-office ul.marquee-view::-webkit-scrollbar-track{background:#1a1a1a}
-.box-office ul.marquee-view::-webkit-scrollbar-thumb{background:#d4af37;border-radius:7px}
-.box-office ul.marquee-view::-webkit-scrollbar-thumb:hover{background:#f4cf57}
+.box-office ul.showtime::-webkit-scrollbar{width:12px}
+.box-office ul.showtime::-webkit-scrollbar-track{background:#000;border-radius:10px}
+.box-office ul.showtime::-webkit-scrollbar-thumb{background:#ff0000;border-radius:10px;border:2px solid #000;box-shadow:0 0 10px rgba(255,0,0,0.5)}
+.box-office ul.showtime::-webkit-scrollbar-thumb:hover{background:#ff4444;box-shadow:0 0 15px rgba(255,0,0,0.8)}
 
 @media (max-width:1400px){ .box-office ul{grid-template-columns:repeat(5, 1fr);} }
-@media (max-width:1100px){ .box-office ul{grid-template-columns:repeat(4, 1fr);} .marquee-item{padding:15px 20px} .marquee-position{left:20px;width:40px;height:40px;font-size:22px} .marquee-info{margin-left:70px} .marquee-showtimes{margin-left:70px} }
+@media (max-width:1100px){ 
+  .box-office ul{grid-template-columns:repeat(4, 1fr);} 
+  .marquee-item{padding:2px 5px} 
+  .marquee-position{width:45px;height:45px;font-size:26px} 
+  .marquee-info{margin-left:20px;gap:10px} 
+  .marquee-title-rating{font-size:22px}
+  .showtime{font-size:16px;padding:8px 14px}
+  .marquee-header{font-size:56px}
+  .now-showing-header{font-size:36px}
+}
 @media (max-width:800px){ .box-office ul{grid-template-columns:repeat(3, 1fr);} }
-@media (max-width:480px){ .box-office ul{grid-template-columns:repeat(2, 1fr);} .marquee-title{font-size:20px} .showtime{font-size:16px;padding:8px 14px} .marquee-meta{font-size:14px} }
+@media (max-width:480px){ 
+  .box-office ul{grid-template-columns:repeat(2, 1fr);} 
+  .marquee-title-rating{font-size:18px;letter-spacing:1px} 
+  .showtime{font-size:14px;padding:6px 12px} 
+  .marquee-meta{font-size:13px}
+  .marquee-position{width:40px;height:40px;font-size:22px}
+  .marquee-header{font-size:42px}
+  .now-showing-header{font-size:28px}
+}

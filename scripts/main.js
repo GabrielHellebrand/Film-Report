@@ -132,8 +132,170 @@
     'Mulan': {runtime: 88, rating: 'G'},
     'Doctor Dolittle': {runtime: 85, rating: 'PG-13'},
     'Out of Sight': {runtime: 123, rating: 'R'},
-    
-    
+    'Armageddon': {runtime: 151, rating: 'PG-13'},
+    'Lethal Weapon 4': {runtime: 127, rating: 'R'},
+    'Small Soldiers': {runtime: 110, rating: 'PG-13'},
+    'Madeline': {runtime: 89, rating: 'PG'},
+    'The Mask of Zorro': {runtime: 136, rating: 'PG-13'},
+    'Theres Something About Mary': {runtime: 120, rating: 'R'},
+    'Saving Private Ryan': {runtime: 169, rating: 'R'},
+    'Mafia': {runtime: 84, rating: 'PG-13'},
+    'The Parent Trap': {runtime: 128, rating: 'PG'},
+    'The Negotiator': {runtime: 140, rating: 'R'},
+    'Ever After A Cinderella Story': {runtime: 121, rating: 'PG-13'},
+    'Snake Eyes': {runtime: 98, rating: 'R'},
+    'Halloween H20': {runtime: 86, rating: 'R'},
+    'How Stella Got Her Groove Back': {runtime: 124, rating: 'R'},
+    'The Avengers': {runtime: 89, rating: 'PG-13'},
+    'Blade': {runtime: 121, rating: 'R'},
+    'Dance with Me': {runtime: 126, rating: 'PG'},
+    '54': {runtime: 93, rating: 'R'},
+    'Why Do Fools Fall in Love': {runtime: 116, rating: 'R'},
+    'Knock Off': {runtime: 91, rating: 'R'},
+    'Rounders': {runtime: 121, rating: 'R'},
+    'Simon Birch': {runtime: 114, rating: 'PG'},
+    'Rush Hour': {runtime: 97, rating: 'PG-13'},
+    'One True Thing': {runtime: 127, rating: 'R'},
+    'Ronin': {runtime: 122, rating: 'R'},
+    'Urban Legend': {runtime: 100, rating: 'R'},
+    'Antz': {runtime: 83, rating: 'PG'},
+    'What Dreams May Come': {runtime: 113, rating: 'PG-13'},
+    'A Night at the Roxbury': {runtime: 82, rating: 'PG-13'},
+    'Holy Man': {runtime: 114, rating: 'PG'},
+    'Practical Magic': {runtime: 104, rating: 'PG-13'},
+    'Bride of Chucky': {runtime: 89, rating: 'R'},
+    'Beloved': {runtime: 172, rating: 'R'},
+    'Pleasantville': {runtime: 124, rating: 'PG-13'},
+    'Soldier': {runtime: 99, rating: 'R'},
+    'Apt Pupil': {runtime: 107, rating: 'R'},
+    'Vampires': {runtime: 108, rating: 'R'},
+    'The Waterboy': {runtime: 90, rating: 'PG-13'},
+    'The Siege': {runtime: 116, rating: 'R'},
+    'The Wizard of Oz': {runtime: 102, rating: 'G'},
+    'Living Out Loud': {runtime: 100, rating: 'R'},
+    'I Still Know What You Did Last Summer': {runtime: 100, rating: 'R'},
+    'Meet Joe Black': {runtime: 178, rating: 'PG-13'},
+    'Ill Be Home for Christmas': {runtime: 86, rating: 'PG'},
+    'The Rugrats Movie': {runtime: 80, rating: 'G'},
+    'Enemy of the State': {runtime: 132, rating: 'R'},
+    'A Bugs Life': {runtime: 95, rating: 'G'},
+    'Babe Pig in the City': {runtime: 96, rating: 'G'},
+    'Home Fries': {runtime: 93, rating: 'PG-13'},
+    'Elizabeth': {runtime: 123, rating: 'R'},
+    'Psycho': {runtime: 104, rating: 'R'},
+    'Star Trek Insurrection': {runtime: 102, rating: 'PG'},
+    'Jack Frost': {runtime: 101, rating: 'PG'},
+    'Youve Got Mail': {runtime: 119, rating: 'PG'},
+    'The Prince of Egypt': {runtime: 99, rating: 'PG'},
+    'Patch Adams': {runtime: 115, rating: 'PG-13'},
+    'Stepmom': {runtime: 125, rating: 'PG-13'},
+    'The Faculty': {runtime: 104, rating: 'R'},
+    'Mighty Joe Young': {runtime: 114, rating: 'PG'},
+    'Shakespeare in Love': {runtime: 124, rating: 'R'},
+    'A Civil Action': {runtime: 115, rating: 'PG-13'},
+    'Varsity Blues': {runtime: 106, rating: 'R'},
+    'The Thin Red Line': {runtime: 171, rating: 'R'},
+    'At First Sight': {runtime: 128, rating: 'PG-13'},
+    'Virus': {runtime: 100, rating: 'R'},
+    'Shes All That': {runtime: 95, rating: 'PG-13'},
+    'Payback': {runtime: 100, rating: 'R'},
+    'Message in a Bottle': {runtime: 131, rating: 'PG-13'},
+    'My Favorite Martian': {runtime: 94, rating: 'PG'},
+    'Blast from the Past': {runtime: 112, rating: 'PG-13'},
+    'Rushmore': {runtime: 93, rating: 'R'},
+    'October Sky': {runtime: 108, rating: 'PG'},
+    'Office Space': {runtime: 90, rating: 'R'},
+    '8MM': {runtime: 123, rating: 'R'},
+    'The Other Sister': {runtime: 130, rating: 'PG-13'},
+    'Analyze This': {runtime: 103, rating: 'R'},
+    'Cruel Intentions': {runtime: 98, rating: 'R'},
+    'The Rage Carrie 2': {runtime: 104, rating: 'R'},
+    'The Corruptor': {runtime: 110, rating: 'R'},
+    'Baby Geniuses': {runtime: 97, rating: 'PG'},
+    'The Deep End of the Ocean': {runtime: 106, rating: 'PG-13'},
+    'Wing Commander': {runtime: 100, rating: 'PG-13'},
+    'Forces of Nature': {runtime: 105, rating: 'PG-13'},
+    'True Crime': {runtime: 127, rating: 'R'},
+    'The King & I': {runtime: 87, rating: 'G'},
+    'Edtv': {runtime: 123, rating: 'PG-13'},
+    'The Mod Squad': {runtime: 92, rating: 'R'},
+    'Dougs 1st Movie': {runtime: 76, rating: 'G'},
+    'Life is Beautiful': {runtime: 116, rating: 'PG-13'},
+    'The Matrix': {runtime: 136, rating: 'R'},
+    '10 Things I Hate About You': {runtime: 97, rating: 'PG-13'},
+    'The Out of Towners': {runtime: 90, rating: 'PG-13'},
+    'Never Been Kissed': {runtime: 107, rating: 'PG-13'},
+    'Go': {runtime: 102, rating: 'R'},
+    'Life': {runtime: 108, rating: 'R'},
+    'Pushing Tin': {runtime: 124, rating: 'R'},
+    'Lost & Found': {runtime: 95, rating: 'PG-13'},
+    'Entrapment': {runtime: 112, rating: 'PG-13'},
+    'The Mummy': {runtime: 124, rating: 'PG-13'},
+    'Election': {runtime: 103, rating: 'R'},
+    'Black Mask': {runtime: 99, rating: 'R'},
+    'A Midsummer Nights Dream': {runtime: 116, rating: 'PG-13'},
+    'Star Wars The Phantom Menace': {runtime: 136, rating: 'PG'},
+    'The Love Letter': {runtime: 88, rating: 'PG-13'},
+    'Notting Hill': {runtime: 124, rating: 'PG-13'},
+    'The Thirteenth Floor': {runtime: 100, rating: 'R'},
+    'Instinct': {runtime: 124, rating: 'R'},
+    'Austin Powers The Spy Who Shagged Me': {runtime: 95, rating: 'PG-13'},
+    'Tea with Mussolini': {runtime: 117, rating: 'PG'},
+    'Tarzan': {runtime: 88, rating: 'G'},
+    'The Generals Daughter': {runtime: 116, rating: 'R'},
+    'Big Daddy': {runtime: 93, rating: 'PG-13'},
+    'An Ideal Husband': {runtime: 97, rating: 'PG-13'},
+    'Wild Wild West': {runtime: 106, rating: 'PG-13'},
+    'South Park Bigger Longer & Uncut': {runtime: 81, rating: 'R'},
+    'Summer of Sam': {runtime: 142, rating: 'R'},
+    'American Pie': {runtime: 95, rating: 'R'},
+    'Eyes Wide Shut': {runtime: 159, rating: 'R'},
+    'Lake Placid': {runtime: 82, rating: 'R'},
+    'The Wood': {runtime: 106, rating: 'R'},
+    'The Haunting': {runtime: 113, rating: 'PG-13'},
+    'Inspector Gadget': {runtime: 78, rating: 'PG'},
+    'Runaway Bride': {runtime: 116, rating: 'PG'},
+    'The Blair Witch Project': {runtime: 81, rating: 'R'},
+    'Deep Blue Sea': {runtime: 105, rating: 'R'},
+    'The Sixth Sense': {runtime: 107, rating: 'PG-13'},
+    'The Thomas Crown Affair': {runtime: 113, rating: 'R'},
+    'Mystery Men': {runtime: 121, rating: 'PG-13'},
+    'The Iron Giant': {runtime: 86, rating: 'PG'},
+    'Bowfinger': {runtime: 97, rating: 'PG-13'},
+    'Mickey Blue Eyes': {runtime: 102, rating: 'PG-13'},
+    'The 13th Warrior': {runtime: 102, rating: 'R'},
+    'The Astronauts Wife': {runtime: 109, rating: 'R'},
+    'The Muse': {runtime: 97, rating: 'PG-13'},
+    'Chill Factor': {runtime: 101, rating: 'R'},
+    'Stigmata': {runtime: 103, rating: 'R'},
+    'Stir of Echoes': {runtime: 99, rating: 'R'},
+    'Blue Streak': {runtime: 93, rating: 'PG-13'},
+    'For Love of the Game': {runtime: 138, rating: 'PG-13'},
+    'Double Jeopardy': {runtime: 105, rating: 'R'},
+    'American Beauty': {runtime: 122, rating: 'R'},
+    'Three Kings': {runtime: 114, rating: 'R'},
+    'Drive Me Crazy': {runtime: 91, rating: 'PG-13'},
+    'The Adventures of Elmo in Grouchland': {runtime: 73, rating: 'G'},
+    'Random Hearts': {runtime: 133, rating: 'R'},
+    'Superstar': {runtime: 82, rating: 'PG-13'},
+    'Fight Club': {runtime: 139, rating: 'R'},
+    'The Story of Us': {runtime: 96, rating: 'R'},
+    'The Best Man': {runtime: 120, rating: 'R'},
+    'Bringing Out the Dead': {runtime: 121, rating: 'R'},
+    'House on Haunted Hill': {runtime: 93, rating: 'R'},
+    'Music of the Heart': {runtime: 124, rating: 'PG'},
+    'The Bone Collector': {runtime: 118, rating: 'R'},
+    'The Bachelor': {runtime: 101, rating: 'PG-13'},
+    'The Insider': {runtime: 158, rating: 'R'},
+    'Pokemon The First Movie': {runtime: 85, rating: 'G'},
+    'Dogma': {runtime: 130, rating: 'R'},
+    'The Messenger The Story of Joan of Arc': {runtime: 158, rating: 'R'},
+    'Anywhere But Here': {runtime: 114, rating: 'PG-13'},
+    'The World Is Not Enough': {runtime: 128, rating: 'PG-13'},
+    'Sleepy Hollow': {runtime: 105, rating: 'R'},
+    'Being John Malkovich': {runtime: 113, rating: 'R'},
+    'Toy Story 2': {runtime: 92, rating: 'G'},
+    'End of Days': {runtime: 122, rating: 'R'},
   };
 
   function normalizeTitle(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
@@ -161,35 +323,37 @@
     return new Date(parseInt(parts[0],10)||0, (parseInt(parts[1],10)||1)-1, parseInt(parts[2],10)||1);
   }
 
-  function formatRuntime(mins){ if(!mins || isNaN(mins)) return '\u2014'; var h=Math.floor(mins/60); var m=mins%60; return h + 'h ' + m + 'm'; }
+  function formatRuntime(mins){ if(!mins || isNaN(mins)) return '\u2014'; var h=Math.floor(mins/60); var m=mins%60; return h + 'hr ' + pad2(m) + 'mins'; }
 
   function clearPosters(){ if(!ul) return; ul.innerHTML = ''; }
 
-  function createMovieItem(movie, position){
+function createMovieItem(movie, position){
     var li = document.createElement('li');
-    var img = document.createElement('img'); 
-    img.alt = movie.title || ''; 
-    img.src = movie.poster || ('./images/' + (movie.title || 'no-art') + '.png'); 
-    li.appendChild(img);
-    
-    // Box office position number
-    if(position !== undefined && position !== null){
-      var positionNumber = document.createElement('div');
-      positionNumber.className = 'position-number';
-      positionNumber.textContent = position;
-      li.appendChild(positionNumber);
-    }
-    
-    // Create overlay that shows on hover
+
+    var posterWrapper = document.createElement('div');
+    posterWrapper.className = 'poster-wrapper';
+
+    var nowShowing = document.createElement('div');
+    nowShowing.className = 'poster-now-showing';
+    nowShowing.textContent = 'NOW SHOWING';
+    posterWrapper.appendChild(nowShowing);
+
+    var img = document.createElement('img');
+    img.alt = movie.title || '';
+    img.src = movie.poster || ('./images/' + (movie.title || 'no-art') + '.png');
+    posterWrapper.appendChild(img);
+
+    // Create overlay for hover info
     var overlay = document.createElement('div'); 
     overlay.className = 'hover-overlay';
-    
+
     var title = document.createElement('div'); 
     title.className = 'overlay-title'; 
     title.textContent = movie.title || '';
     overlay.appendChild(title);
     
-    var key = normalizeTitle(movie.title||'');
+    // Get normalized key for lookups
+    var key = normalizeTitle(movie.title || '');
     
     // Runtime
     var runtime = runtimeLookup.hasOwnProperty(key) ? formatRuntime(runtimeLookup[key]) : '\u2014';
@@ -197,7 +361,7 @@
     runtimeDiv.className = 'overlay-line';
     runtimeDiv.innerHTML = '<strong>Runtime:</strong> ' + runtime;
     overlay.appendChild(runtimeDiv);
-    
+      
     // Rating
     var movieRating = movie.rating || (mpaaLookup.hasOwnProperty(key) ? mpaaLookup[key] : null);
     if(movieRating){
@@ -231,64 +395,67 @@
       overlay.appendChild(totalDiv);
     }
     
-    li.appendChild(overlay);
+    // ✅ FIXED: Append overlay to posterWrapper instead of li
+    posterWrapper.appendChild(overlay);
+    li.appendChild(posterWrapper);
+    
     return li;
   }
 
-  function generateShowtimes(runtime, position){
+  // Function to add "Now Showing" header for grid view
+  function addNowShowingHeader(){
+    
+  }
+
+function generateShowtimes(runtime, position){
     if(!runtime || isNaN(runtime)) return [];
     var showtimes = [];
     
-    // Calculate how many screens each movie gets based on position
-    // Total 24 screens for 20 movies
+    // Screen allocation rules
     var screensAllocated;
     if(position === 1){
-      screensAllocated = 3; // #1 movie gets 3 screens
+      screensAllocated = 2; // #1 movie gets 2 screens
     } else if(position === 2){
       screensAllocated = 2; // #2 movie gets 2 screens
-    } else if(position <= 4){
-      screensAllocated = 2; // #3-4 get 2 screens each
+    } else if(position <= 6){
+      screensAllocated = 1; // #3-6 get 1 screen each
     } else {
-      screensAllocated = 1; // #5-20 get 1 screen each (16 screens)
+      screensAllocated = 1; // #7-10 get 1 screen each
     }
     
-    // Calculate total time needed per showing
-    // Preshow: 2 minutes
-    // Previews: 10% of runtime
-    // Movie: runtime
-    // Cleaning: 20 minutes
+    // Time calculations
     var preshow = 2;
     var previews = Math.round(runtime * 0.10);
     var cleaning = 20;
     var totalShowDuration = preshow + previews + runtime + cleaning;
     
-    // Generate showtimes based on screens and runtime
-    // Start time: 11 AM (660 minutes from midnight)
-    // Latest showtime start: 11 PM (1380 minutes from midnight)
-    // Movies can end before 1 AM (1440 minutes from midnight)
-    var startTime = 11 * 60; // 11 AM in minutes
-    var latestShowtimeStart = 23 * 60; // 11 PM - no showtime can start after this
-    var endTime = 25 * 60; // 1 AM next day (in minutes from midnight)
+    var startTime = 11 * 60; // 11 AM
+    var latestShowtimeStart = 23 * 60; // 11 PM
     
-    // Generate staggered showtimes across multiple screens
     var allTimes = [];
+    
+    // Generate times per screen
     for(var screen = 0; screen < screensAllocated; screen++){
       var currentTime = startTime;
-      
-      // Stagger start times by 15-30 minutes per screen for variety
+
+      // ⭐ Randomize first showtime between 11:00 AM and 1:00 PM (0–120 min)
+      var randomOffset = Math.floor(Math.random() * 120);
+      currentTime += randomOffset;
+
+      // Stagger other screens further
       if(screen > 0){
         var stagger = 15 + (screen * 20);
         currentTime += stagger;
       }
-      
-      // Showtime must start before 11 PM, but the movie (including preshow, previews, runtime, cleaning) can end before 1 AM
-      while(currentTime <= latestShowtimeStart && currentTime + preshow + previews + runtime <= endTime){
+
+      // Only enforce the start-time window (11 AM → 11 PM)
+      while(currentTime <= latestShowtimeStart){
         allTimes.push(currentTime);
         currentTime += totalShowDuration;
       }
     }
     
-    // Sort all times and remove duplicates that are too close (within 10 min)
+    // Sort & remove near-duplicates within 10 minutes
     allTimes.sort(function(a, b){ return a - b; });
     var uniqueTimes = [];
     for(var i = 0; i < allTimes.length; i++){
@@ -304,7 +471,7 @@
       }
     }
     
-    // Convert to formatted time strings
+    // Convert minutes → formatted time (e.g., "12:45 PM")
     for(var i = 0; i < uniqueTimes.length; i++){
       var totalMinutes = uniqueTimes[i];
       var hour = Math.floor(totalMinutes / 60);
@@ -315,63 +482,50 @@
     }
     
     return showtimes;
-  }
+}
 
-  function createMarqueeItem(movie, position){
+function createMarqueeItem(movie, position){
     var li = document.createElement('li');
     li.className = 'marquee-item';
-    
-    var key = normalizeTitle(movie.title||'');
-    var runtime = runtimeLookup.hasOwnProperty(key) ? runtimeLookup[key] : null;
-    var movieRating = movie.rating || (mpaaLookup.hasOwnProperty(key) ? mpaaLookup[key] : null);
-    
-    // Position number
-    var posDiv = document.createElement('div');
-    posDiv.className = 'marquee-position';
-    posDiv.textContent = position;
-    li.appendChild(posDiv);
-    
-    // Movie info container
+
+    // Container for all movie info
     var infoDiv = document.createElement('div');
     infoDiv.className = 'marquee-info';
+
+    // Title + Rating + Runtime (on same line)
+    var titleRatingDiv = document.createElement('div');
+    titleRatingDiv.className = 'marquee-title-rating';
+    var titleText = movie.title || '';
+    var key = normalizeTitle(movie.title || '');
+    var movieRating = movie.rating || (mpaaLookup.hasOwnProperty(key) ? mpaaLookup[key] : null);
+    var runtime = runtimeLookup.hasOwnProperty(key) ? runtimeLookup[key] : null;
     
-    // Title
-    var titleDiv = document.createElement('div');
-    titleDiv.className = 'marquee-title';
-    titleDiv.textContent = movie.title || '';
-    infoDiv.appendChild(titleDiv);
+    if(movieRating) titleText += ' • ' + movieRating;
+    if(runtime) titleText += ' • ' + formatRuntime(runtime);
     
-    // Rating and Runtime on same line
-    var metaDiv = document.createElement('div');
-    metaDiv.className = 'marquee-meta';
-    var metaParts = [];
-    if(movieRating) metaParts.push(movieRating);
-    if(runtime) metaParts.push(formatRuntime(runtime));
-    if(metaParts.length > 0){
-      metaDiv.textContent = metaParts.join(' • ');
-      infoDiv.appendChild(metaDiv);
-    }
-    
-    li.appendChild(infoDiv);
-    
-    // Showtimes
+    titleRatingDiv.textContent = titleText;
+    infoDiv.appendChild(titleRatingDiv);
+
+    // Showtimes (next row)
+    var runtime = runtimeLookup.hasOwnProperty(key) ? runtimeLookup[key] : null;
     if(runtime){
-      var showtimes = generateShowtimes(runtime, position);
-      var showtimesDiv = document.createElement('div');
-      showtimesDiv.className = 'marquee-showtimes';
-      
-      for(var i = 0; i < showtimes.length; i++){
-        var timeSpan = document.createElement('span');
-        timeSpan.className = 'showtime';
-        timeSpan.textContent = showtimes[i];
-        showtimesDiv.appendChild(timeSpan);
-      }
-      
-      li.appendChild(showtimesDiv);
+        var showtimes = generateShowtimes(runtime, position);
+        var showtimesDiv = document.createElement('div');
+        showtimesDiv.className = 'marquee-showtimes';
+
+        for(var i = 0; i < showtimes.length; i++){
+            var timeSpan = document.createElement('span');
+            timeSpan.className = 'showtime';
+            timeSpan.textContent = showtimes[i];
+            showtimesDiv.appendChild(timeSpan);
+        }
+
+        infoDiv.appendChild(showtimesDiv);
     }
-    
+
+    li.appendChild(infoDiv);
     return li;
-  }
+}
 
   // View variables
   var allMovies = [];
@@ -393,6 +547,13 @@
     // Remove marquee class if present
     if(ul.classList) ul.classList.remove('marquee-view');
     
+    // Remove marquee header if present
+    var existingHeader = box && box.querySelector('.marquee-header');
+    if(existingHeader) existingHeader.remove();
+    
+    // Add "Now Showing" header
+    addNowShowingHeader();
+    
     // Display first 10 movies (2 rows of 5)
     var maxMovies = Math.min(10, allMovies.length);
     
@@ -408,7 +569,22 @@
     // Add marquee class
     if(ul.classList) ul.classList.add('marquee-view');
     
-    for(var i = 0; i < allMovies.length; i++){
+    // Remove "Now Showing" header if present
+    // var existingNowShowing = box && box.querySelector('.now-showing-header');
+    // if(existingNowShowing) existingNowShowing.remove();
+    
+    // Add Hellebrand Cinemas header if not already present
+    var existingHeader = box && box.querySelector('.marquee-header');
+    if(!existingHeader && box){
+      var header = document.createElement('div');
+      header.className = 'marquee-header';
+      header.textContent = 'Hellebrand Cinemas 12';
+      box.insertBefore(header, ul);
+    }
+    
+    // Only show first 10 movies in marquee view
+    var maxMovies = Math.min(10, allMovies.length);
+    for(var i = 0; i < maxMovies; i++){
       ul.appendChild(createMarqueeItem(allMovies[i], i + 1));
     }
   }

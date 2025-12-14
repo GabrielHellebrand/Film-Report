@@ -1,0 +1,15 @@
+{
+  "week": "1999-08-20",
+  "movies": [
+    { "title": "The Sixth Sense"},
+    { "title": "Bowfinger"},
+    { "title": "Mickey Blue Eyes"},
+    { "title": "Runaway Bride"},
+    { "title": "The Blair Witch Project"},
+    { "title": "The Thomas Crown Affair"},
+    { "title": "Inspector Gadget"},
+    { "title": "Deep Blue Sea"},
+    { "title": "Mystery Men"},
+    { "title": "The Iron Giant"}
+  ]
+}

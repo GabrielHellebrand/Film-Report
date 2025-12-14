@@ -1,0 +1,15 @@
+{
+  "week": "1999-01-01",
+  "movies": [
+    { "title": "Patch Adams"},
+    { "title": "Stepmom"},
+    { "title": "Youve Got Mail"},
+    { "title": "The Prince of Egypt"},
+    { "title": "A Bugs Life"},
+    { "title": "Mighty Joe Young"},
+    { "title": "The Faculty"},
+    { "title": "Enemy of the State"},
+    { "title": "Star Trek Insurrection"},
+    { "title": "Shakespeare in Love"}
+  ]
+}

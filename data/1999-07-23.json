@@ -1,0 +1,15 @@
+{
+  "week": "1999-07-23",
+  "movies": [
+    { "title": "The Haunting"},
+    { "title": "Inspector Gadget"},
+    { "title": "American Pie"},
+    { "title": "Eyes Wide Shut"},
+    { "title": "Big Daddy"},
+    { "title": "Lake Placid"},
+    { "title": "Wild Wild West"},
+    { "title": "Tarzan"},
+    { "title": "The Wood"},
+    { "title": "Star Wars The Phantom Menace"}
+  ]
+}

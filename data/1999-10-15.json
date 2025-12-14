@@ -1,0 +1,15 @@
+{
+  "week": "1999-10-15",
+  "movies": [
+    { "title": "Fight Club"},
+    { "title": "Double Jeopardy"},
+    { "title": "The Story of Us"},
+    { "title": "Three Kings"},
+    { "title": "American Beauty"},
+    { "title": "Random Hearts"},
+    { "title": "Superstar"},
+    { "title": "The Sixth Sense"},
+    { "title": "Blue Streak"},
+    { "title": "Drive Me Crazy"}
+  ]
+}

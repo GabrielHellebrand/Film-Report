@@ -1,0 +1,15 @@
+{
+  "week": "1998-07-10",
+  "movies": [
+    { "title": "Lethal Weapon 4"},
+    { "title": "Armageddon"},
+    { "title": "Small Soldiers"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Mulan"},
+    { "title": "Madeline"},
+    { "title": "The X Files"},
+    { "title": "Out of Sight"},
+    { "title": "Six Days Seven Nights"},
+    { "title": "The Truman Show"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "week": "1998-11-20",
+  "movies": [
+    { "title": "The Rugrats Movie"},
+    { "title": "Enemy of the State"},
+    { "title": "The Waterboy"},
+    { "title": "Meet Joe Black"},
+    { "title": "I Still Know What You Did Last Summer"},
+    { "title": "The Siege"},
+    { "title": "Ill Be Home for Christmas"},
+    { "title": "Antz"},
+    { "title": "Pleasantville"},
+    { "title": "The Wizard of Oz"}
+  ]
+}

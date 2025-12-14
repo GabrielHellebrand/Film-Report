@@ -1,0 +1,15 @@
+{
+  "week": "1999-10-01",
+  "movies": [
+    { "title": "Double Jeopardy"},
+    { "title": "Three Kings"},
+    { "title": "American Beauty"},
+    { "title": "Blue Streak"},
+    { "title": "The Sixth Sense"},
+    { "title": "Drive Me Crazy"},
+    { "title": "For Love of the Game"},
+    { "title": "The Adventures of Elmo in Grouchland"},
+    { "title": "Stigmata"},
+    { "title": "Stir of Echoes"}
+  ]
+}

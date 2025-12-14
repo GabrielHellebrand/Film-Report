@@ -1,0 +1,15 @@
+{
+  "week": "1999-06-11",
+  "movies": [
+    { "title": "Austin Powers The Spy Who Shagged Me"},
+    { "title": "Star Wars The Phantom Menace"},
+    { "title": "Notting Hill"},
+    { "title": "Instinct"},
+    { "title": "The Mummy"},
+    { "title": "Entrapment"},
+    { "title": "The Matrix"},
+    { "title": "The Thirteenth Floor"},
+    { "title": "Tea with Mussolini"},
+    { "title": "Never Been Kissed"}
+  ]
+}

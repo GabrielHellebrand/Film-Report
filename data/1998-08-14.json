@@ -1,0 +1,15 @@
+{
+  "week": "1998-08-14",
+  "movies": [
+    { "title": "Saving Private Ryan"},
+    { "title": "How Stella Got Her Groove Back"},
+    { "title": "The Avengers"},
+    { "title": "Theres Something About Mary"},
+    { "title": "Snake Eyes"},
+    { "title": "Halloween H20"},
+    { "title": "Ever After A Cinderella Story"},
+    { "title": "The Parent Trap"},
+    { "title": "The Negotiator"},
+    { "title": "Armageddon"}
+  ]
+}

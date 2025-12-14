@@ -1,0 +1,15 @@
+{
+  "week": "1998-08-07",
+  "movies": [
+    { "title": "Saving Private Ryan"},
+    { "title": "Snake Eyes"},
+    { "title": "Halloween H20"},
+    { "title": "Theres Something About Mary"},
+    { "title": "The Parent Trap"},
+    { "title": "Ever After A Cinderella Story"},
+    { "title": "The Negotiator"},
+    { "title": "The Mask of Zorro"},
+    { "title": "Armageddon"},
+    { "title": "Lethal Weapon 4"}
+  ]
+}
