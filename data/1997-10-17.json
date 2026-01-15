@@ -2,7 +2,7 @@
   "week": "1997-10-17",
   "movies": [
     { "title": "I Know What You Did Last Summer"},
-    { "title": "The Devils Advocate"},
+    { "title": "The Devil's Advocate"},
     { "title": "Kiss the Girls"},
     { "title": "Seven Years in Tibet"},
     { "title": "In & Out"},
@@ -10,6 +10,16 @@
     { "title": "RocketMan"},
     { "title": "The Peacemaker"},
     { "title": "LA Confidential"},
-    { "title": "The Full Monty"}
+    { "title": "Bean"},
+    { "title": "Playing God"},
+    { "title": "The Full Monty"},
+    { "title": "The Edge"},
+    { "title": "Most Wanted"},
+    { "title": "The Game"},
+    { "title": "Boogie Nights"},
+    { "title": "Gang Related"},
+    { "title": "My Best Friend's Wedding"},
+    { "title": "Contact"},
+    { "title": "U Turn"}
   ]
 }

@@ -1,7 +1,7 @@
 {
   "week": "1998-09-04",
   "movies": [
-    { "title": "Theres Something About Mary"},
+    { "title": "There's Something About Mary"},
     { "title": "Blade"},
     { "title": "Saving Private Ryan"},
     { "title": "Knock Off"},
@@ -10,6 +10,16 @@
     { "title": "Why Do Fools Fall In Love"},
     { "title": "Snake Eyes"},
     { "title": "The Parent Trap"},
-    { "title": "How Stella Got Her Groove Back"}
+    { "title": "How Stella Got Her Groove Back"},
+    { "title": "Armageddon"},
+    { "title": "Dance With Me"},
+    { "title": "Dead Man on Campus"},
+    { "title": "The Mask of Zorro"},
+    { "title": "The Negotiator"},
+    { "title": "Halloween H20"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Wrongfully Accused"},
+    { "title": "Slums of Beverly Hills"},
+    { "title": "Air Bud Golden Receiver"}
   ]
 }

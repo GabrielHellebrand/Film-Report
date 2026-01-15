@@ -1,0 +1,25 @@
+{
+  "week": "2000-01-28",
+  "movies": [
+    { "title": "Eye of the Beholder"},
+    { "title": "Next Friday"},
+    { "title": "The Hurricane"},
+    { "title": "Stuart Little"},
+    { "title": "The Green Mile"},
+    { "title": "Down to You"},
+    { "title": "Galaxy Quest"},
+    { "title": "Girl Interrupted"},
+    { "title": "The Talented Mr Ripley"},
+    { "title": "Toy Story 2"},
+    { "title": "Fantasia 2000"},
+    { "title": "Angela's Ashes"},
+    { "title": "The Cider House Rules"},
+    { "title": "Play it to the Bone"},
+    { "title": "Magnolia"},
+    { "title": "Any Given Sunday"},
+    { "title": "Supernova"},
+    { "title": "The End of the Affair"},
+    { "title": "Bicentennial Man"},
+    { "title": "Snow Falling on Cedars"}
+  ]
+}

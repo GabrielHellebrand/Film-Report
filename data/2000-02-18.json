@@ -1,0 +1,25 @@
+{
+  "week": "2000-02-18",
+  "movies": [
+    { "title": "The Whole Nine Yards"},
+    { "title": "Hanging Up"},
+    { "title": "Snow Day"},
+    { "title": "Pitch Black"},
+    { "title": "The Tigger Movie"},
+    { "title": "Scream 3"},
+    { "title": "The Beach"},
+    { "title": "Boiler Room"},
+    { "title": "The Cider House Rules"},
+    { "title": "The Green Mile"},
+    { "title": "The Hurricane"},
+    { "title": "Fantasia 2000"},
+    { "title": "Stuart Little"},
+    { "title": "Next Friday"},
+    { "title": "Galaxy Quest"},
+    { "title": "The Talented Mr Ripley"},
+    { "title": "Toy Story 2"},
+    { "title": "Angela's Ashes"},
+    { "title": "Girl Interrupted"},
+    { "title": "Down to You"}
+  ]
+}

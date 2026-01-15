@@ -1,15 +1,25 @@
 {
   "week": "1998-12-18",
   "movies": [
-    { "title": "Youve Got Mail"},
+    { "title": "You've Got Mail"},
     { "title": "The Prince of Egypt"},
-    { "title": "A Bugs Life"},
+    { "title": "A Bug's Life"},
     { "title": "Star Trek Insurrection"},
     { "title": "Jack Frost"},
     { "title": "Enemy of the State"},
     { "title": "The Waterboy"},
     { "title": "The Rugrats Movie"},
     { "title": "Psycho"},
-    { "title": "Elizabeth"}
+    { "title": "Elizabeth"},
+    { "title": "Meet Joe Black"},
+    { "title": "Life is Beautiful"},
+    { "title": "Babe Pig in the City"},
+    { "title": "I Still Know What You Did Last Summer"},
+    { "title": "Waking Ned Devine"},
+    { "title": "A Simple Plan"},
+    { "title": "Very Bad Things"},
+    { "title": "I'll Be Home for Christmas"},
+    { "title": "Shakespeare In Love"},
+    { "title": "The Siege"}
   ]
 }

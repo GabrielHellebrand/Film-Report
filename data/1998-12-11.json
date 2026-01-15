@@ -2,7 +2,7 @@
   "week": "1998-12-11",
   "movies": [
     { "title": "Star Trek Insurrection"},
-    { "title": "A Bugs Life"},
+    { "title": "A Bug's Life"},
     { "title": "Jack Frost"},
     { "title": "Enemy of the State"},
     { "title": "The Rugrats Movie"},
@@ -10,6 +10,16 @@
     { "title": "Psycho"},
     { "title": "Meet Joe Black"},
     { "title": "Babe Pig in the City"},
-    { "title": "Elizabeth"}
+    { "title": "Elizabeth"},
+    { "title": "Very Bad Things"},
+    { "title": "I Still Know What You Did Last Summer"},
+    { "title": "Home Fries"},
+    { "title": "Life is Beautiful"},
+    { "title": "Ringmaster"},
+    { "title": "The Siege"},
+    { "title": "Waking Ned Devine"},
+    { "title": "Pleasantville"},
+    { "title": "I'll Be Home for Christmas"},
+    { "title": "A Simple Plan"}
   ]
 }

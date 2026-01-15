@@ -3,13 +3,23 @@
   "movies": [
     { "title": "Rush Hour"},
     { "title": "One True Thing"},
-    { "title": "Theres Something About Mary"},
+    { "title": "There's Something About Mary"},
     { "title": "Rounders"},
     { "title": "Simon Birch"},
     { "title": "Saving Private Ryan"},
     { "title": "Blade"},
     { "title": "Ever After A Cinderella Story"},
+    { "title": "Armageddon"},
     { "title": "Snake Eyes"},
-    { "title": "How Stella Got Her Groove Back"}
+    { "title": "The Parent Trap"},
+    { "title": "How Stella Got Her Groove Back"},
+    { "title": "The Mask of Zorro"},
+    { "title": "Knock Off"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Why Do Fools Fall In Love"},
+    { "title": "Slums of Beverly Hills"},
+    { "title": "Dance With Me"},
+    { "title": "54"},
+    { "title": "Dead Man on Campus"}
   ]
 }

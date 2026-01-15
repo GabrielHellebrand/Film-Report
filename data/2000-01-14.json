@@ -1,0 +1,25 @@
+{
+  "week": "2000-01-14",
+  "movies": [
+    { "title": "Next Friday"},
+    { "title": "Stuart Little"},
+    { "title": "The Hurricane"},
+    { "title": "Girl Interrupted"},
+    { "title": "The Green Mile"},
+    { "title": "Galaxy Quest"},
+    { "title": "The Talented Mr Ripley"},
+    { "title": "Supernova"},
+    { "title": "Toy Story 2"},
+    { "title": "Any Given Sunday"},
+    { "title": "Bicentennial Man"},
+    { "title": "Magnolia"},
+    { "title": "Deuce Bigalow Male Gigolo"},
+    { "title": "The Cider House Rules"},
+    { "title": "Fantasia 2000"},
+    { "title": "Snow Falling on Cedars"},
+    { "title": "Anna and the King"},
+    { "title": "Man on the Moon"},
+    { "title": "The World Is Not Enough"},
+    { "title": "The End of the Affair"}
+  ]
+}

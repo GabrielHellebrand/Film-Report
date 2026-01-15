@@ -1,0 +1,25 @@
+{
+  "week": "2000-03-10",
+  "movies": [
+    { "title": "Mission to Mars"},
+    { "title": "The Ninth Gate"},
+    { "title": "My Dog Skip"},
+    { "title": "The Whole Nine Yards"},
+    { "title": "The Cider House Rules"},
+    { "title": "Drowning Mona"},
+    { "title": "The Next Best Thing"},
+    { "title": "Snow Day"},
+    { "title": "Pitch Black"},
+    { "title": "Reindeer Games"},
+    { "title": "Wonder Boys"},
+    { "title": "The Tigger Movie"},
+    { "title": "3 Strikes"},
+    { "title": "Hanging Up"},
+    { "title": "Scream 3"},
+    { "title": "What Planet Are You From"},
+    { "title": "Fantasia 2000"},
+    { "title": "Boiler Room"},
+    { "title": "The Beach"},
+    { "title": "The Green Mile"}
+  ]
+}

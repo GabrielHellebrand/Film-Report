@@ -3,13 +3,23 @@
   "movies": [
     { "title": "A Civil Action"},
     { "title": "Patch Adams"},
-    { "title": "Youve Got Mail"},
+    { "title": "You've Got Mail"},
     { "title": "Stepmom"},
     { "title": "The Prince of Egypt"},
     { "title": "Mighty Joe Young"},
-    { "title": "A Bugs Life"},
+    { "title": "A Bug's Life"},
     { "title": "Shakespeare in Love"},
     { "title": "The Faculty"},
-    { "title": "Enemy of the State"}
+    { "title": "Enemy of the State"},
+    { "title": "Star Trek Insurrection"},
+    { "title": "Waking Ned Devine"},
+    { "title": "The Waterboy"},
+    { "title": "The Rugrats Movie"},
+    { "title": "The Thin Red Line"},
+    { "title": "Jack Frost"},
+    { "title": "Life is Beautiful"},
+    { "title": "Elizabeth"},
+    { "title": "Down in the Delta"},
+    { "title": "A Simple Plan"}
   ]
 }

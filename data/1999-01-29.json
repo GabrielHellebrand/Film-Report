@@ -1,15 +1,25 @@
 {
   "week": "1999-01-29",
   "movies": [
-    { "title": "Shes All That"},
+    { "title": "She's All That"},
     { "title": "Patch Adams"},
     { "title": "Varsity Blues"},
     { "title": "A Civil Action"},
     { "title": "Shakespeare in Love"},
     { "title": "Stepmom"},
     { "title": "The Thin Red Line"},
-    { "title": "Youve Got Mail"},
+    { "title": "You've Got Mail"},
     { "title": "At First Sight"},
-    { "title": "The Prince of Egypt"}
+    { "title": "The Prince of Egypt"},
+    { "title": "A Simple Plan"},
+    { "title": "A Bug's Life"},
+    { "title": "Mighty Joe Young"},
+    { "title": "Waking Ned Devine"},
+    { "title": "Virus"},
+    { "title": "In Dreams"},
+    { "title": "Life is Beautiful"},
+    { "title": "Enemy of the State"},
+    { "title": "Playing by Heart"},
+    { "title": "Gloria"}
   ]
 }

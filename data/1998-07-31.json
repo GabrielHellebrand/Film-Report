@@ -3,13 +3,23 @@
   "movies": [
     { "title": "Saving Private Ryan"},
     { "title": "The Parent Trap"},
-    { "title": "Theres Something About Mary"},
+    { "title": "There's Something About Mary"},
     { "title": "The Negotiator"},
     { "title": "Ever After A Cinderella Story"},
     { "title": "The Mask of Zorro"},
     { "title": "Lethal Weapon 4"},
     { "title": "Armageddon"},
     { "title": "Doctor Dolittle"},
-    { "title": "Mafia"}
+    { "title": "Mafia"},
+    { "title": "BASEketball"},
+    { "title": "Disturbing Behavior"},
+    { "title": "Small Soldiers"},
+    { "title": "Mulan"},
+    { "title": "Titanic"},
+    { "title": "Madeline"},
+    { "title": "Smoke Signals"},
+    { "title": "The X Files"},
+    { "title": "The Horse Whisperer"},
+    { "title": "The Truman Show"}
   ]
 }

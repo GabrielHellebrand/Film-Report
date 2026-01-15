@@ -2,7 +2,7 @@
   "week": "1998-08-28",
   "movies": [
     { "title": "Blade"},
-    { "title": "Theres Something About Mary"},
+    { "title": "There's Something About Mary"},
     { "title": "Saving Private Ryan"},
     { "title": "54"},
     { "title": "Why Do Fools Fall In Love"},
@@ -10,6 +10,16 @@
     { "title": "How Stella Got Her Groove Back"},
     { "title": "Snake Eyes"},
     { "title": "The Parent Trap"},
-    { "title": "Dance With Me"}
+    { "title": "Dance With Me"},
+    { "title": "Dead Man on Campus"},
+    { "title": "Armageddon"},
+    { "title": "Wrongfully Accused"},
+    { "title": "Halloween H20"},
+    { "title": "The Mask of Zorro"},
+    { "title": "The Avengers"},
+    { "title": "The Negotiator"},
+    { "title": "Lethal Weapon 4"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Air Bud Golden Receiver"}
   ]
 }

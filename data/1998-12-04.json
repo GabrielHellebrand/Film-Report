@@ -1,7 +1,7 @@
 {
   "week": "1998-12-04",
   "movies": [
-    { "title": "A Bugs Life"},
+    { "title": "A Bug's Life"},
     { "title": "Psycho"},
     { "title": "Enemy of the State"},
     { "title": "The Rugrats Movie"},
@@ -10,6 +10,16 @@
     { "title": "Babe Pig in the City"},
     { "title": "Elizabeth"},
     { "title": "I Still Know What You Did Last Summer"},
-    { "title": "Home Fries"}
+    { "title": "Home Fries"},
+    { "title": "Very Bad Things"},
+    { "title": "Ringmaster"},
+    { "title": "The Siege"},
+    { "title": "Life is Beautiful"},
+    { "title": "I'll Be Home for Christmas"},
+    { "title": "American History X"},
+    { "title": "Celebrity"},
+    { "title": "Pleasantville"},
+    { "title": "Theres Something About Mary"},
+    { "title": "Living Out Loud"}
   ]
 }

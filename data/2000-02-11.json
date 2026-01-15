@@ -1,0 +1,25 @@
+{
+  "week": "2000-02-11",
+  "movies": [
+    { "title": "Scream 3"},
+    { "title": "The Beach"},
+    { "title": "Snow Day"},
+    { "title": "The Tigger Movie"},
+    { "title": "The Hurricane"},
+    { "title": "The Green Mile"},
+    { "title": "Next Friday"},
+    { "title": "Stuart Little"},
+    { "title": "Galaxy Quest"},
+    { "title": "Eye of the Beholder"},
+    { "title": "Fantasia 2000"},
+    { "title": "The Talented Mr Ripley"},
+    { "title": "The Cider House Rules"},
+    { "title": "Down to You"},
+    { "title": "Girl Interrupted"},
+    { "title": "Toy Story 2"},
+    { "title": "Angela's Ashes"},
+    { "title": "Magnolia"},
+    { "title": "The End of the Affair"},
+    { "title": "Any Given Sunday"}
+  ]
+}

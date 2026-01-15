@@ -1,0 +1,25 @@
+{
+  "week": "2000-03-17",
+  "movies": [
+    { "title": "Erin Brockovich"},
+    { "title": "Mission to Mars"},
+    { "title": "Final Destination"},
+    { "title": "My Dog Skip"},
+    { "title": "The Ninth Gate"},
+    { "title": "The Whole Nine Yards"},
+    { "title": "The Cider House Rules"},
+    { "title": "Snow Day"},
+    { "title": "The Tigger Movie"},
+    { "title": "Drowning Mona"},
+    { "title": "The Next Best Thing"},
+    { "title": "Fantasia 2000"},
+    { "title": "Pitch Black"},
+    { "title": "Reindeer Games"},
+    { "title": "Wonder Boys"},
+    { "title": "3 Strikes"},
+    { "title": "Scream 3"},
+    { "title": "The Green Mile"},
+    { "title": "Hanging Up"},
+    { "title": "Boiler Room"}
+  ]
+}

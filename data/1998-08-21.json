@@ -3,13 +3,23 @@
   "movies": [
     { "title": "Blade"},
     { "title": "Saving Private Ryan"},
-    { "title": "Theres Something About Mary"},
+    { "title": "There's Something About Mary"},
     { "title": "How Stella Got Her Groove Back"},
     { "title": "Snake Eyes"},
+    { "title": "Dead Man on Campus"},
     { "title": "Ever After A Cinderella Story"},
     { "title": "Dance With Me"},
     { "title": "The Parent Trap"},
     { "title": "The Avengers"},
-    { "title": "Halloween H20"}
+    { "title": "Halloween H20"},
+    { "title": "Wrongfully Accused"},
+    { "title": "Armageddon"},
+    { "title": "The Negotiator"},
+    { "title": "The Mask of Zorro"},
+    { "title": "Return to Paradise"},
+    { "title": "Air Bud Golden Receiver"},
+    { "title": "Lethal Weapon 4"},
+    { "title": "Doctor Dolittle"},
+    { "title": "Titanic"}
   ]
 }

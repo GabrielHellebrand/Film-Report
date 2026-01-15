@@ -1,0 +1,25 @@
+{
+  "week": "2000-03-31",
+  "movies": [
+    { "title": "Erin Brockovich"},
+    { "title": "The Road to El Dorado"},
+    { "title": "The Skulls"},
+    { "title": "Romeo Must Die"},
+    { "title": "High Fidelity"},
+    { "title": "Final Destination"},
+    { "title": "Mission to Mars"},
+    { "title": "Here on Earth"},
+    { "title": "Whatever It Takes"},
+    { "title": "The Cider House Rules"},
+    { "title": "My Dog Skip"},
+    { "title": "Price of Glory"},
+    { "title": "Fantasia 2000"},
+    { "title": "The Whole Nine Yards"},
+    { "title": "Boys Don't Cry"},
+    { "title": "The Ninth Gate"},
+    { "title": "The Tigger Movie"},
+    { "title": "Snow Day"},
+    { "title": "The Green Mile"},
+    { "title": "Pitch Black"}
+  ]
+}

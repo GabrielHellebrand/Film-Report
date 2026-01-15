@@ -2,14 +2,24 @@
   "week": "1997-10-24",
   "movies": [
     { "title": "I Know What You Did Last Summer"},
-    { "title": "The Devils Advocate"},
+    { "title": "The Devil's Advocate"},
     { "title": "Kiss the Girls"},
     { "title": "Seven Years in Tibet"},
     { "title": "Gattaca"},
     { "title": "FairyTale A True Story"},
     { "title": "In & Out"},
     { "title": "RocketMan"},
+    { "title": "A Life Less Ordinary"},
     { "title": "LA Confidential"},
-    { "title": "Soul Food"}
+    { "title": "Soul Food"},
+    { "title": "Boogie Nights"},
+    { "title": "The Peacemaker"},
+    { "title": "The Full Monty"},
+    { "title": "Bean"},
+    { "title": "The Edge"},
+    { "title": "Playing God"},
+    { "title": "The Game"},
+    { "title": "Most Wanted"},
+    { "title": "Gang Related"}
   ]
 }

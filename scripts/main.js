@@ -9,307 +9,43 @@
   }
   if(typeof window !== 'undefined') window.__filmReportInit = true;
 
-  // DOM refs
-  var box = document.querySelector('.box-office');
-  var ul = box && box.querySelector('ul');
-  var weekPicker = document.getElementById('weekPicker');
-  var prevBtn = document.getElementById('prevWeekend');
-  var nextBtn = document.getElementById('nextWeekend');
-  var weekLabel = document.getElementById('weekLabel');
+  // DOM refs - will be initialized in boot()
+  var box = null;
+  var ul = null;
+  var weekPicker = null;
+  var prevBtn = null;
+  var nextBtn = null;
+  var weekLabel = null;
 
   var WEEK_KEY = 'filmreport_selected_week';
 
-  // Combined movie data lookup
-  var movieMap = {
-    'GI Jane': {runtime: 125, rating: 'R' },
-    'Money Talks': {runtime: 97, rating: 'R' },
-    'Air Force One': {runtime: 124, rating: 'R' },
-    'Mimic': {runtime: 105, rating: 'R' },
-    'Conspiracy Theory': {runtime: 135, rating: 'R' },
-    'Cop Land': {runtime: 104, rating: 'R' },
-    'Event Horizon': {runtime: 95, rating: 'R' },
-    'Leave It to Beaver': {runtime: 84, rating: 'PG' },
-    'George of the Jungle': {runtime: 92, rating: 'PG' },
-    'Men in Black': {runtime: 98, rating: 'PG-13' },
-    'Hoodlum': {runtime: 130, rating: 'R' },
-    'Excess Baggage': {runtime: 101, rating: 'PG-13' },
-    'Fire Down Below': {runtime: 104, rating: 'R' },
-    'The Game': {runtime: 129, rating: 'R' },
-    'The Full Monty': {runtime: 91, rating: 'R' },
-    'In & Out': {runtime: 90, rating: 'PG-13' },
-    'Wishmaster': {runtime: 90, rating: 'R' },
-    'LA Confidential': {runtime: 138, rating: 'R' },
-    'A Thousand Acres': {runtime: 105, rating: 'R' },
-    'The Peacemaker': {runtime: 124, rating: 'R' },
-    'Soul Food': {runtime: 114, rating: 'R' },
-    'The Edge': {runtime: 117, rating: 'R' },
-    'Kiss the Girls': {runtime: 115, rating: 'R' },
-    'Seven Years in Tibet': {runtime: 136, rating: 'PG-13' },
-    'RocketMan': {runtime: 95, rating: 'PG' },
-    'I Know What You Did Last Summer': {runtime: 102, rating: 'R' },
-    'The Devils Advocate': {runtime: 144, rating: 'R' },
-    'Gattaca': {runtime: 107, rating: 'PG-13' },
-    'FairyTale A True Story': {runtime: 99, rating: 'PG' },
-    'Boogie Nights': {runtime: 156, rating: 'R' },
-    'Red Corner': {runtime: 122, rating: 'R' },
-    'Starship Troopers': {runtime: 129, rating: 'R' },
-    'Bean': {runtime: 89, rating: 'PG-13' },
-    'Eves Bayou': {runtime: 109, rating: 'R' },
-    'The Jackal': {runtime: 124, rating: 'R' },
-    'The Little Mermaid': {runtime: 83, rating: 'G' },
-    'The Man Who Knew Too Little': {runtime: 94, rating: 'PG' },
-    'Mortal Kombat Annihilation': {runtime: 95, rating: 'PG-13' },
-    'Anastasia': {runtime: 94, rating: 'G' },
-    'The Rainmaker': {runtime: 135, rating: 'PG-13' },
-    'Midnight in the Garden of Good and Evil': {runtime: 155, rating: 'R' },
-    'Flubber': {runtime: 93, rating: 'PG' },
-    'Alien Resurrection': {runtime: 109, rating: 'R' },
-    'Scream 2': {runtime: 120, rating: 'R' },
-    'For Richer or Poorer': {runtime: 115, rating: 'PG-13' },
-    'Home Alone 3': {runtime: 102, rating: 'PG' },
-    'Amistad': {runtime: 155, rating: 'R' },
-    'Titanic': {runtime: 194, rating: 'PG-13' },
-    'Tomorrow Never Dies': {runtime: 119, rating: 'PG-13' },
-    'Mousehunt': {runtime: 98, rating: 'PG' },
-    'As Good as It Gets': {runtime: 139, rating: 'PG-13' },
-    'Jackie Brown': {runtime: 154, rating: 'R' },
-    'An American Werewolf in Paris': {runtime: 98, rating: 'R' },
-    'Mr Magoo': {runtime: 87, rating: 'PG' },
-    'Good Will Hunting': {runtime: 127, rating: 'R' },
-    'Wag the Dog': {runtime: 97, rating: 'R' },    
-    'Fallen': {runtime: 124, rating: 'R' },
-    'Hard Rain': {runtime: 97, rating: 'R' },
-    'Half Baked': {runtime: 82, rating: 'R' },
-    'Spice World': {runtime: 93, rating: 'PG' },
-    'Great Expectations': {runtime: 111, rating: 'R' },
-    'Desperate Measures': {runtime: 100, rating: 'R' },
-    'Deep Rising': {runtime: 106, rating: 'R' },
-    'The Replacement Killers': {runtime: 87, rating: 'R' },
-    'Blues Brothers 2000': {runtime: 123, rating: 'PG-13' },
-    'The Wedding Singer': {runtime: 97, rating: 'PG-13' },
-    'Sphere': {runtime: 134, rating: 'PG-13' },
-    'The Borrowers': {runtime: 87, rating: 'PG' },
-    'The Apostle': {runtime: 134, rating: 'PG-13'},
-    'Senseless': {runtime: 93, rating: 'R' },
-    'Palmetto': {runtime: 114, rating: 'R'},
-    'Dark City': {runtime: 100, rating: 'R'},
-    'US Marshals': {runtime: 131, rating: 'PG-13' },
-    'Twilight': {runtime: 94, rating: 'R' },
-    'Hush': {runtime: 95, rating: 'PG-13' },
-    'The Big Lebowski': {runtime: 117, rating: 'R' },
-    'The Man In The Iron Mask': {runtime: 132, rating: 'PG-13'},
-    'Primary Colors': {runtime: 143, rating: 'R'},
-    'Wild Things': {runtime: 108, rating: 'R'},
-    'Mr Nice Guy': {runtime: 95, rating: 'PG-13'},
-    'Grease': {runtime: 110, rating: 'PG'},
-    'The Newton Boys': {runtime: 122, rating: 'PG-13'},
-    'Lost in Space': {runtime: 130, rating: 'PG-13'},
-    'Mercury Rising': {runtime: 111, rating: 'R'},
-    'City of Angels': {runtime: 114, rating: 'PG-13'},
-    'Species II': {runtime: 93, rating: 'R'},
-    'The Players Club': {runtime: 104, rating: 'R'},
-    'The Odd Couple II': {runtime: 97, rating: 'PG-13'},
-    'The Object of My Affection': {runtime: 111, rating: 'R'},
-    'Paulie': {runtime: 91, rating: 'PG'},
-    'The Big Hit': {runtime: 91, rating: 'R'},
-    'He Got Game': {runtime: 136, rating: 'R'},
-    'Les Miserables': {runtime: 134, rating: 'PG-13'},
-    'Black Dog': {runtime: 88, rating: 'PG-13'},
-    'Deep Impact': {runtime: 121, rating: 'PG-13'},
-    'Woo': {runtime: 84, rating: 'R'},
-    'The Horse Whisperer': {runtime: 169, rating: 'R'},
-    'Quest for Camelot': {runtime: 86, rating: 'G'},
-    'Godzilla': {runtime: 138, rating: 'PG-13'},
-    'Bulworth': {runtime: 108, rating: 'R'},
-    'Fear and Loathing in Las Vegas': {runtime: 118, rating: 'R'},
-    'Hope Floats': {runtime: 114, rating: 'PG-13'},
-    'I Got the Hook-Up': {runtime: 93, rating: 'R'},
-    'The Truman Show': {runtime: 103, rating: 'PG'},
-    'A Perfect Murder': {runtime: 107, rating: 'R'},
-    'Six Days, Seven Nights': {runtime: 102, rating: 'PG-13'},
-    'Cant Hardly Wait': {runtime: 100, rating: 'PG-13'},
-    'The X-Files': {runtime: 121, rating: 'PG-13'},
-    'Mulan': {runtime: 88, rating: 'G'},
-    'Doctor Dolittle': {runtime: 85, rating: 'PG-13'},
-    'Out of Sight': {runtime: 123, rating: 'R'},
-    'Armageddon': {runtime: 151, rating: 'PG-13'},
-    'Lethal Weapon 4': {runtime: 127, rating: 'R'},
-    'Small Soldiers': {runtime: 110, rating: 'PG-13'},
-    'Madeline': {runtime: 89, rating: 'PG'},
-    'The Mask of Zorro': {runtime: 136, rating: 'PG-13'},
-    'Theres Something About Mary': {runtime: 120, rating: 'R'},
-    'Saving Private Ryan': {runtime: 169, rating: 'R'},
-    'Mafia': {runtime: 84, rating: 'PG-13'},
-    'The Parent Trap': {runtime: 128, rating: 'PG'},
-    'The Negotiator': {runtime: 140, rating: 'R'},
-    'Ever After A Cinderella Story': {runtime: 121, rating: 'PG-13'},
-    'Snake Eyes': {runtime: 98, rating: 'R'},
-    'Halloween H20': {runtime: 86, rating: 'R'},
-    'How Stella Got Her Groove Back': {runtime: 124, rating: 'R'},
-    'The Avengers': {runtime: 89, rating: 'PG-13'},
-    'Blade': {runtime: 121, rating: 'R'},
-    'Dance with Me': {runtime: 126, rating: 'PG'},
-    '54': {runtime: 93, rating: 'R'},
-    'Why Do Fools Fall in Love': {runtime: 116, rating: 'R'},
-    'Knock Off': {runtime: 91, rating: 'R'},
-    'Rounders': {runtime: 121, rating: 'R'},
-    'Simon Birch': {runtime: 114, rating: 'PG'},
-    'Rush Hour': {runtime: 97, rating: 'PG-13'},
-    'One True Thing': {runtime: 127, rating: 'R'},
-    'Ronin': {runtime: 122, rating: 'R'},
-    'Urban Legend': {runtime: 100, rating: 'R'},
-    'Antz': {runtime: 83, rating: 'PG'},
-    'What Dreams May Come': {runtime: 113, rating: 'PG-13'},
-    'A Night at the Roxbury': {runtime: 82, rating: 'PG-13'},
-    'Holy Man': {runtime: 114, rating: 'PG'},
-    'Practical Magic': {runtime: 104, rating: 'PG-13'},
-    'Bride of Chucky': {runtime: 89, rating: 'R'},
-    'Beloved': {runtime: 172, rating: 'R'},
-    'Pleasantville': {runtime: 124, rating: 'PG-13'},
-    'Soldier': {runtime: 99, rating: 'R'},
-    'Apt Pupil': {runtime: 107, rating: 'R'},
-    'Vampires': {runtime: 108, rating: 'R'},
-    'The Waterboy': {runtime: 90, rating: 'PG-13'},
-    'The Siege': {runtime: 116, rating: 'R'},
-    'The Wizard of Oz': {runtime: 102, rating: 'G'},
-    'Living Out Loud': {runtime: 100, rating: 'R'},
-    'I Still Know What You Did Last Summer': {runtime: 100, rating: 'R'},
-    'Meet Joe Black': {runtime: 178, rating: 'PG-13'},
-    'Ill Be Home for Christmas': {runtime: 86, rating: 'PG'},
-    'The Rugrats Movie': {runtime: 80, rating: 'G'},
-    'Enemy of the State': {runtime: 132, rating: 'R'},
-    'A Bugs Life': {runtime: 95, rating: 'G'},
-    'Babe Pig in the City': {runtime: 96, rating: 'G'},
-    'Home Fries': {runtime: 93, rating: 'PG-13'},
-    'Elizabeth': {runtime: 123, rating: 'R'},
-    'Psycho': {runtime: 104, rating: 'R'},
-    'Star Trek Insurrection': {runtime: 102, rating: 'PG'},
-    'Jack Frost': {runtime: 101, rating: 'PG'},
-    'Youve Got Mail': {runtime: 119, rating: 'PG'},
-    'The Prince of Egypt': {runtime: 99, rating: 'PG'},
-    'Patch Adams': {runtime: 115, rating: 'PG-13'},
-    'Stepmom': {runtime: 125, rating: 'PG-13'},
-    'The Faculty': {runtime: 104, rating: 'R'},
-    'Mighty Joe Young': {runtime: 114, rating: 'PG'},
-    'Shakespeare in Love': {runtime: 124, rating: 'R'},
-    'A Civil Action': {runtime: 115, rating: 'PG-13'},
-    'Varsity Blues': {runtime: 106, rating: 'R'},
-    'The Thin Red Line': {runtime: 171, rating: 'R'},
-    'At First Sight': {runtime: 128, rating: 'PG-13'},
-    'Virus': {runtime: 100, rating: 'R'},
-    'Shes All That': {runtime: 95, rating: 'PG-13'},
-    'Payback': {runtime: 100, rating: 'R'},
-    'Message in a Bottle': {runtime: 131, rating: 'PG-13'},
-    'My Favorite Martian': {runtime: 94, rating: 'PG'},
-    'Blast from the Past': {runtime: 112, rating: 'PG-13'},
-    'Rushmore': {runtime: 93, rating: 'R'},
-    'October Sky': {runtime: 108, rating: 'PG'},
-    'Office Space': {runtime: 90, rating: 'R'},
-    '8MM': {runtime: 123, rating: 'R'},
-    'The Other Sister': {runtime: 130, rating: 'PG-13'},
-    'Analyze This': {runtime: 103, rating: 'R'},
-    'Cruel Intentions': {runtime: 98, rating: 'R'},
-    'The Rage Carrie 2': {runtime: 104, rating: 'R'},
-    'The Corruptor': {runtime: 110, rating: 'R'},
-    'Baby Geniuses': {runtime: 97, rating: 'PG'},
-    'The Deep End of the Ocean': {runtime: 106, rating: 'PG-13'},
-    'Wing Commander': {runtime: 100, rating: 'PG-13'},
-    'Forces of Nature': {runtime: 105, rating: 'PG-13'},
-    'True Crime': {runtime: 127, rating: 'R'},
-    'The King & I': {runtime: 87, rating: 'G'},
-    'Edtv': {runtime: 123, rating: 'PG-13'},
-    'The Mod Squad': {runtime: 92, rating: 'R'},
-    'Dougs 1st Movie': {runtime: 76, rating: 'G'},
-    'Life is Beautiful': {runtime: 116, rating: 'PG-13'},
-    'The Matrix': {runtime: 136, rating: 'R'},
-    '10 Things I Hate About You': {runtime: 97, rating: 'PG-13'},
-    'The Out of Towners': {runtime: 90, rating: 'PG-13'},
-    'Never Been Kissed': {runtime: 107, rating: 'PG-13'},
-    'Go': {runtime: 102, rating: 'R'},
-    'Life': {runtime: 108, rating: 'R'},
-    'Pushing Tin': {runtime: 124, rating: 'R'},
-    'Lost & Found': {runtime: 95, rating: 'PG-13'},
-    'Entrapment': {runtime: 112, rating: 'PG-13'},
-    'The Mummy': {runtime: 124, rating: 'PG-13'},
-    'Election': {runtime: 103, rating: 'R'},
-    'Black Mask': {runtime: 99, rating: 'R'},
-    'A Midsummer Nights Dream': {runtime: 116, rating: 'PG-13'},
-    'Star Wars The Phantom Menace': {runtime: 136, rating: 'PG'},
-    'The Love Letter': {runtime: 88, rating: 'PG-13'},
-    'Notting Hill': {runtime: 124, rating: 'PG-13'},
-    'The Thirteenth Floor': {runtime: 100, rating: 'R'},
-    'Instinct': {runtime: 124, rating: 'R'},
-    'Austin Powers The Spy Who Shagged Me': {runtime: 95, rating: 'PG-13'},
-    'Tea with Mussolini': {runtime: 117, rating: 'PG'},
-    'Tarzan': {runtime: 88, rating: 'G'},
-    'The Generals Daughter': {runtime: 116, rating: 'R'},
-    'Big Daddy': {runtime: 93, rating: 'PG-13'},
-    'An Ideal Husband': {runtime: 97, rating: 'PG-13'},
-    'Wild Wild West': {runtime: 106, rating: 'PG-13'},
-    'South Park Bigger Longer & Uncut': {runtime: 81, rating: 'R'},
-    'Summer of Sam': {runtime: 142, rating: 'R'},
-    'American Pie': {runtime: 95, rating: 'R'},
-    'Eyes Wide Shut': {runtime: 159, rating: 'R'},
-    'Lake Placid': {runtime: 82, rating: 'R'},
-    'The Wood': {runtime: 106, rating: 'R'},
-    'The Haunting': {runtime: 113, rating: 'PG-13'},
-    'Inspector Gadget': {runtime: 78, rating: 'PG'},
-    'Runaway Bride': {runtime: 116, rating: 'PG'},
-    'The Blair Witch Project': {runtime: 81, rating: 'R'},
-    'Deep Blue Sea': {runtime: 105, rating: 'R'},
-    'The Sixth Sense': {runtime: 107, rating: 'PG-13'},
-    'The Thomas Crown Affair': {runtime: 113, rating: 'R'},
-    'Mystery Men': {runtime: 121, rating: 'PG-13'},
-    'The Iron Giant': {runtime: 86, rating: 'PG'},
-    'Bowfinger': {runtime: 97, rating: 'PG-13'},
-    'Mickey Blue Eyes': {runtime: 102, rating: 'PG-13'},
-    'The 13th Warrior': {runtime: 102, rating: 'R'},
-    'The Astronauts Wife': {runtime: 109, rating: 'R'},
-    'The Muse': {runtime: 97, rating: 'PG-13'},
-    'Chill Factor': {runtime: 101, rating: 'R'},
-    'Stigmata': {runtime: 103, rating: 'R'},
-    'Stir of Echoes': {runtime: 99, rating: 'R'},
-    'Blue Streak': {runtime: 93, rating: 'PG-13'},
-    'For Love of the Game': {runtime: 138, rating: 'PG-13'},
-    'Double Jeopardy': {runtime: 105, rating: 'R'},
-    'American Beauty': {runtime: 122, rating: 'R'},
-    'Three Kings': {runtime: 114, rating: 'R'},
-    'Drive Me Crazy': {runtime: 91, rating: 'PG-13'},
-    'The Adventures of Elmo in Grouchland': {runtime: 73, rating: 'G'},
-    'Random Hearts': {runtime: 133, rating: 'R'},
-    'Superstar': {runtime: 82, rating: 'PG-13'},
-    'Fight Club': {runtime: 139, rating: 'R'},
-    'The Story of Us': {runtime: 96, rating: 'R'},
-    'The Best Man': {runtime: 120, rating: 'R'},
-    'Bringing Out the Dead': {runtime: 121, rating: 'R'},
-    'House on Haunted Hill': {runtime: 93, rating: 'R'},
-    'Music of the Heart': {runtime: 124, rating: 'PG'},
-    'The Bone Collector': {runtime: 118, rating: 'R'},
-    'The Bachelor': {runtime: 101, rating: 'PG-13'},
-    'The Insider': {runtime: 158, rating: 'R'},
-    'Pokemon The First Movie': {runtime: 85, rating: 'G'},
-    'Dogma': {runtime: 130, rating: 'R'},
-    'The Messenger The Story of Joan of Arc': {runtime: 158, rating: 'R'},
-    'Anywhere But Here': {runtime: 114, rating: 'PG-13'},
-    'The World Is Not Enough': {runtime: 128, rating: 'PG-13'},
-    'Sleepy Hollow': {runtime: 105, rating: 'R'},
-    'Being John Malkovich': {runtime: 113, rating: 'R'},
-    'Toy Story 2': {runtime: 92, rating: 'G'},
-    'End of Days': {runtime: 122, rating: 'R'},
-  };
+  // Movie data lookup - will be loaded from movies.json
+  var movieMap = null;
+  var runtimeLookup = {};
+  var mpaaLookup = {};
 
   function normalizeTitle(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
 
-  // Build normalized lookup maps keyed by normalized title
-  var runtimeLookup = {};
-  var mpaaLookup = {};
-  for(var key in movieMap){ 
-    if(movieMap.hasOwnProperty(key)){ 
-      var normalized = normalizeTitle(key);
-      var data = movieMap[key];
-      if(data.runtime) runtimeLookup[normalized] = data.runtime;
-      if(data.rating) mpaaLookup[normalized] = data.rating;
-    } 
+  // Function to load movies.json
+  function loadMovieData(){
+    return fetch('./data/movies.json')
+      .then(function(res){
+        if(!res.ok) throw new Error('movies.json fetch failed');
+        return res.json();
+      })
+      .then(function(data){
+        movieMap = data;
+        // Build normalized lookup maps
+        for(var key in movieMap){
+          if(movieMap.hasOwnProperty(key)){
+            var normalized = normalizeTitle(key);
+            var movieData = movieMap[key];
+            if(movieData.runtime) runtimeLookup[normalized] = movieData.runtime;
+            if(movieData.rating) mpaaLookup[normalized] = movieData.rating;
+          }
+        }
+        return movieMap;
+      });
   }
 
   function pad2(n){ return n < 10 ? '0' + n : String(n); }
@@ -327,7 +63,7 @@
 
   function clearPosters(){ if(!ul) return; ul.innerHTML = ''; }
 
-function createMovieItem(movie, position){
+  function createMovieItem(movie, position){
     var li = document.createElement('li');
 
     var posterWrapper = document.createElement('div');
@@ -395,7 +131,6 @@ function createMovieItem(movie, position){
       overlay.appendChild(totalDiv);
     }
     
-    // ✅ FIXED: Append overlay to posterWrapper instead of li
     posterWrapper.appendChild(overlay);
     li.appendChild(posterWrapper);
     
@@ -407,20 +142,24 @@ function createMovieItem(movie, position){
     
   }
 
-function generateShowtimes(runtime, position){
+  function generateShowtimes(runtime, position){
     if(!runtime || isNaN(runtime)) return [];
     var showtimes = [];
     
-    // Screen allocation rules
+    // Screen allocation rules based on position (1-indexed)
     var screensAllocated;
-    if(position === 1){
-      screensAllocated = 2; // #1 movie gets 2 screens
-    } else if(position === 2){
-      screensAllocated = 2; // #2 movie gets 2 screens
+    if(position <= 3){
+      screensAllocated = 3; // #1-3 get 3 screens
     } else if(position <= 6){
-      screensAllocated = 1; // #3-6 get 1 screen each
+      screensAllocated = 2; // #4-6 get 2 screens
+    } else if(position <= 12){
+      screensAllocated = 1; // #7-12 get 1 screen
+    } else if(position <= 16){
+      screensAllocated = 0.5; // #13-16 get 1/2 screen
+    } else if(position <= 20){
+      screensAllocated = 0.25; // #17-20 get 1/4 screen
     } else {
-      screensAllocated = 1; // #7-10 get 1 screen each
+      screensAllocated = 0.25; // default for beyond position 20
     }
     
     // Time calculations
@@ -435,10 +174,11 @@ function generateShowtimes(runtime, position){
     var allTimes = [];
     
     // Generate times per screen
-    for(var screen = 0; screen < screensAllocated; screen++){
+    var numScreens = Math.ceil(screensAllocated);
+    for(var screen = 0; screen < numScreens; screen++){
       var currentTime = startTime;
 
-      // ⭐ Randomize first showtime between 11:00 AM and 1:00 PM (0–120 min)
+      // Randomize first showtime between 11:00 AM and 1:00 PM (0–120 min)
       var randomOffset = Math.floor(Math.random() * 120);
       currentTime += randomOffset;
 
@@ -471,6 +211,12 @@ function generateShowtimes(runtime, position){
       }
     }
     
+    // For fractional screens, limit the number of showtimes
+    if(screensAllocated < 1){
+      var maxShowtimes = Math.max(1, Math.ceil(uniqueTimes.length * screensAllocated));
+      uniqueTimes = uniqueTimes.slice(0, maxShowtimes);
+    }
+    
     // Convert minutes → formatted time (e.g., "12:45 PM")
     for(var i = 0; i < uniqueTimes.length; i++){
       var totalMinutes = uniqueTimes[i];
@@ -482,9 +228,9 @@ function generateShowtimes(runtime, position){
     }
     
     return showtimes;
-}
+  }
 
-function createMarqueeItem(movie, position){
+  function createMarqueeItem(movie, position){
     var li = document.createElement('li');
     li.className = 'marquee-item';
 
@@ -492,16 +238,14 @@ function createMarqueeItem(movie, position){
     var infoDiv = document.createElement('div');
     infoDiv.className = 'marquee-info';
 
-    // Title + Rating + Runtime (on same line)
+    // Title + Rating (on same line) - Runtime removed
     var titleRatingDiv = document.createElement('div');
     titleRatingDiv.className = 'marquee-title-rating';
     var titleText = movie.title || '';
     var key = normalizeTitle(movie.title || '');
     var movieRating = movie.rating || (mpaaLookup.hasOwnProperty(key) ? mpaaLookup[key] : null);
-    var runtime = runtimeLookup.hasOwnProperty(key) ? runtimeLookup[key] : null;
     
     if(movieRating) titleText += ' • ' + movieRating;
-    if(runtime) titleText += ' • ' + formatRuntime(runtime);
     
     titleRatingDiv.textContent = titleText;
     infoDiv.appendChild(titleRatingDiv);
@@ -525,14 +269,18 @@ function createMarqueeItem(movie, position){
 
     li.appendChild(infoDiv);
     return li;
-}
+  }
 
   // View variables
   var allMovies = [];
   var currentView = 'grid'; // 'grid' or 'marquee'
+  var currentCarouselIndex = 0;
+  var moviesPerPage = 4;
   
   function renderFromArray(movies){ 
+    console.log('renderFromArray called with', movies.length, 'movies');
     allMovies = movies;
+    currentCarouselIndex = 0; // Reset carousel position
     if(currentView === 'grid'){
       updateGrid();
     } else {
@@ -541,8 +289,13 @@ function createMarqueeItem(movie, position){
   }
   
   function updateGrid(){
+    console.log('updateGrid called, ul exists:', !!ul, 'box exists:', !!box);
     clearPosters(); 
-    if(!ul) return;
+    if(!ul) {
+      console.error('updateGrid: ul is null!');
+      return;
+    }
+    console.log('Cleared posters, building grid...');
     
     // Remove marquee class if present
     if(ul.classList) ul.classList.remove('marquee-view');
@@ -551,14 +304,95 @@ function createMarqueeItem(movie, position){
     var existingHeader = box && box.querySelector('.marquee-header');
     if(existingHeader) existingHeader.remove();
     
+    // Remove existing carousel container if present
+    var existingCarousel = box && box.querySelector('.carousel-container');
+    if(existingCarousel) existingCarousel.remove();
+    
     // Add "Now Showing" header
     addNowShowingHeader();
     
-    // Display first 10 movies (2 rows of 5)
-    var maxMovies = Math.min(10, allMovies.length);
+    // Create carousel container
+    var carouselContainer = document.createElement('div');
+    carouselContainer.className = 'carousel-container';
+    
+    // Create left arrow
+    var leftArrow = document.createElement('button');
+    leftArrow.className = 'carousel-arrow left';
+    leftArrow.innerHTML = '‹';
+    leftArrow.onclick = function(){ navigateCarousel(-1); };
+    carouselContainer.appendChild(leftArrow);
+    
+    // Move ul into carousel container (use `box` as the canonical container)
+    if(ul.parentNode) ul.parentNode.removeChild(ul);
+    carouselContainer.appendChild(ul);
+    
+    // Create right arrow
+    var rightArrow = document.createElement('button');
+    rightArrow.className = 'carousel-arrow right';
+    rightArrow.innerHTML = '›';
+    rightArrow.onclick = function(){ navigateCarousel(1); };
+    carouselContainer.appendChild(rightArrow);
+    
+    // Add carousel to the main box container
+    if(box) box.appendChild(carouselContainer);
+    
+    // Display first 20 movies, but only show 4 at a time
+    var maxMovies = Math.min(20, allMovies.length);
+    console.log('Creating', maxMovies, 'movie items');
     
     for(var i = 0; i < maxMovies; i++){
-      ul.appendChild(createMovieItem(allMovies[i], i + 1));
+      var li = createMovieItem(allMovies[i], i + 1);
+      if(i >= moviesPerPage){
+        li.style.display = 'none';
+      }
+      ul.appendChild(li);
+    }
+    console.log('Movie items added to ul, ul.children.length:', ul.children.length);
+    
+    // Update arrow visibility
+    updateCarouselArrows();
+  }
+  
+  function navigateCarousel(direction){
+    if(!ul) return;
+    
+    var maxMovies = Math.min(20, allMovies.length);
+    var maxIndex = Math.max(0, maxMovies - moviesPerPage);
+    
+    currentCarouselIndex += direction * moviesPerPage;
+    
+    // Clamp index
+    if(currentCarouselIndex < 0) currentCarouselIndex = 0;
+    if(currentCarouselIndex > maxIndex) currentCarouselIndex = maxIndex;
+    
+    // Show/hide movies based on current index
+    var items = ul.querySelectorAll('li');
+    for(var i = 0; i < items.length; i++){
+      if(i >= currentCarouselIndex && i < currentCarouselIndex + moviesPerPage){
+        items[i].style.display = '';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+    
+    updateCarouselArrows();
+  }
+  
+  function updateCarouselArrows(){
+    var leftArrow = document.querySelector('.carousel-arrow.left');
+    var rightArrow = document.querySelector('.carousel-arrow.right');
+    
+    if(leftArrow){
+      leftArrow.style.opacity = currentCarouselIndex === 0 ? '0.3' : '1';
+      leftArrow.style.cursor = currentCarouselIndex === 0 ? 'default' : 'pointer';
+    }
+    
+    var maxMovies = Math.min(20, allMovies.length);
+    var maxIndex = Math.max(0, maxMovies - moviesPerPage);
+    
+    if(rightArrow){
+      rightArrow.style.opacity = currentCarouselIndex >= maxIndex ? '0.3' : '1';
+      rightArrow.style.cursor = currentCarouselIndex >= maxIndex ? 'default' : 'pointer';
     }
   }
   
@@ -566,24 +400,35 @@ function createMarqueeItem(movie, position){
     clearPosters();
     if(!ul) return;
     
+    // Remove carousel container if present and restore `ul` into `box`
+    var existingCarousel = box && box.querySelector('.carousel-container');
+    if(existingCarousel){
+      if(existingCarousel.parentNode) existingCarousel.parentNode.removeChild(existingCarousel);
+      if(box) box.appendChild(ul);
+    }
+    
     // Add marquee class
     if(ul.classList) ul.classList.add('marquee-view');
     
-    // Remove "Now Showing" header if present
-    // var existingNowShowing = box && box.querySelector('.now-showing-header');
-    // if(existingNowShowing) existingNowShowing.remove();
-    
-    // Add Hellebrand Cinemas header if not already present
-    var existingHeader = box && box.querySelector('.marquee-header');
-    if(!existingHeader && box){
-      var header = document.createElement('div');
-      header.className = 'marquee-header';
-      header.textContent = 'Hellebrand Cinemas 12';
-      box.insertBefore(header, ul);
+    // Add Hellebrand Cinemas header as a marquee list item if not already present
+    var existingHeaderLi = ul && ul.querySelector('li.marquee-header-item');
+    if(!existingHeaderLi && ul){
+      var headerLi = document.createElement('li');
+      headerLi.className = 'marquee-item marquee-header-item';
+      var headerDiv = document.createElement('div');
+      headerDiv.className = 'marquee-header';
+      headerDiv.textContent = 'Hellebrand Cinemas 24';
+      headerLi.appendChild(headerDiv);
+      // Insert as the first child of the marquee <ul> so it spans above columns
+      if(ul.firstChild){
+        ul.insertBefore(headerLi, ul.firstChild);
+      } else {
+        ul.appendChild(headerLi);
+      }
     }
     
-    // Only show first 10 movies in marquee view
-    var maxMovies = Math.min(10, allMovies.length);
+    // Show all 20 movies in marquee view
+    var maxMovies = Math.min(20, allMovies.length);
     for(var i = 0; i < maxMovies; i++){
       ul.appendChild(createMarqueeItem(allMovies[i], i + 1));
     }
@@ -628,43 +473,92 @@ function createMarqueeItem(movie, position){
     if(!availableWeeks || indexOf(availableWeeks, snappedIso) !== -1){ loadAndRenderWeekend(snappedIso); }
   }
 
-  if(prevBtn) prevBtn.addEventListener('click', function(){ changeWeekBy(-7); });
-  if(nextBtn) nextBtn.addEventListener('click', function(){ changeWeekBy(7); });
-  
-  // View toggle
-  var toggleViewBtn = document.getElementById('toggleView');
-  if(toggleViewBtn) toggleViewBtn.addEventListener('click', toggleView);
-
-  if(weekPicker){
-    var minIso = '1997-08-22';
-    weekPicker.setAttribute('min', minIso);
-    weekPicker.setAttribute('max', toIsoDate(new Date()));
-    weekPicker.addEventListener('change', function(e){
-      var picked = parseIsoDate(e.target.value);
-      var anchor = parseIsoDate(minIso);
-      var daysSince = Math.round((picked-anchor)/(1000*60*60*24));
-      var weeks = Math.round(daysSince/7);
-      var snapped = new Date(anchor.getTime()); snapped.setDate(anchor.getDate() + (weeks*7));
-      setSelectedWeek(snapped);
-      var snappedIso = toIsoDate(snapped);
-      if(!availableWeeks || indexOf(availableWeeks, snappedIso) !== -1){ loadAndRenderWeekend(snappedIso); }
-    });
-  }
-
-  window.addEventListener('keydown', function(e){ if(e.key === 'ArrowLeft') changeWeekBy(-7); if(e.key === 'ArrowRight') changeWeekBy(7); });
-
   function boot(){
-    var saved = null; try{ saved = localStorage.getItem(WEEK_KEY); }catch(e){}
-    if(saved){ try{ setSelectedWeek(parseIsoDate(saved)); }catch(e){} }
-    if(weekLabel && weekLabel.getAttribute('data-week')){
-      var lw = weekLabel.getAttribute('data-week'); if(weekPicker) weekPicker.value = lw; loadIndex().then(function(){ if(indexOf(availableWeeks,lw)!==-1) loadAndRenderWeekend(lw); }).catch(function(){});
-      return;
+    console.log('Boot function started');
+    
+    // Initialize DOM references
+    box = document.querySelector('.box-office');
+    ul = box && box.querySelector('ul');
+    weekPicker = document.getElementById('weekPicker');
+    prevBtn = document.getElementById('prevWeekend');
+    nextBtn = document.getElementById('nextWeekend');
+    weekLabel = document.getElementById('weekLabel');
+    
+    console.log('DOM elements:', {box: !!box, ul: !!ul, weekPicker: !!weekPicker, weekLabel: !!weekLabel});
+
+    // Set up event listeners after DOM is ready
+    if(prevBtn) prevBtn.addEventListener('click', function(){ changeWeekBy(-7); });
+    if(nextBtn) nextBtn.addEventListener('click', function(){ changeWeekBy(7); });
+    
+    // View toggle
+    var toggleViewBtn = document.getElementById('toggleView');
+    if(toggleViewBtn) toggleViewBtn.addEventListener('click', toggleView);
+
+    if(weekPicker){
+      var minIso = '1997-08-22';
+      weekPicker.setAttribute('min', minIso);
+      weekPicker.setAttribute('max', toIsoDate(new Date()));
+      weekPicker.addEventListener('change', function(e){
+        var picked = parseIsoDate(e.target.value);
+        var anchor = parseIsoDate(minIso);
+        var daysSince = Math.round((picked-anchor)/(1000*60*60*24));
+        var weeks = Math.round(daysSince/7);
+        var snapped = new Date(anchor.getTime()); snapped.setDate(anchor.getDate() + (weeks*7));
+        setSelectedWeek(snapped);
+        var snappedIso = toIsoDate(snapped);
+        if(!availableWeeks || indexOf(availableWeeks, snappedIso) !== -1){ loadAndRenderWeekend(snappedIso); }
+      });
     }
-    var defaultIso = saved || '1997-08-22';
-    setSelectedWeek(parseIsoDate(defaultIso));
-    loadIndex().then(function(){ if(indexOf(availableWeeks, defaultIso)!==-1) loadAndRenderWeekend(defaultIso); }).catch(function(){});
+
+    window.addEventListener('keydown', function(e){ if(e.key === 'ArrowLeft') changeWeekBy(-7); if(e.key === 'ArrowRight') changeWeekBy(7); });
+    
+    // Load movie data first, then proceed with initialization
+    console.log('Starting to load movie data...');
+    loadMovieData()
+      .then(function(){
+        console.log('Movie data loaded successfully');
+        var saved = null; try{ saved = localStorage.getItem(WEEK_KEY); }catch(e){}
+        console.log('Saved week from localStorage:', saved);
+        
+        if(saved){ try{ setSelectedWeek(parseIsoDate(saved)); }catch(e){} }
+        if(weekLabel && weekLabel.getAttribute('data-week')){
+          var lw = weekLabel.getAttribute('data-week'); 
+          console.log('Week from label:', lw);
+          if(weekPicker) weekPicker.value = lw; 
+          loadIndex().then(function(){ 
+            console.log('Index loaded, available weeks:', availableWeeks);
+            if(indexOf(availableWeeks,lw)!==-1) {
+              console.log('Loading weekend:', lw);
+              loadAndRenderWeekend(lw); 
+            }
+          }).catch(function(err){
+            console.error('Index load failed:', err);
+          });
+          return;
+        }
+        var defaultIso = saved || '1997-08-22';
+        console.log('Using default ISO:', defaultIso);
+        setSelectedWeek(parseIsoDate(defaultIso));
+        loadIndex().then(function(){ 
+          console.log('Index loaded for default week');
+          if(indexOf(availableWeeks, defaultIso)!==-1) {
+            console.log('Loading default weekend:', defaultIso);
+            loadAndRenderWeekend(defaultIso); 
+          }
+        }).catch(function(err){
+          console.error('Default index load failed:', err);
+        });
+      })
+      .catch(function(error){
+        console.error('Failed to load movie data:', error);
+      });
   }
 
-  boot();
+  // Wait for DOM to be ready before initializing
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
 
 })();

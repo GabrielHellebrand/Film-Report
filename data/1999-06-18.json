@@ -3,13 +3,23 @@
   "movies": [
     { "title": "Tarzan"},
     { "title": "Austin Powers The Spy Who Shagged Me"},
-    { "title": "The Generals Daughter"},
+    { "title": "The General's Daughter"},
     { "title": "Star Wars The Phantom Menace"},
     { "title": "Notting Hill"},
     { "title": "Instinct"},
     { "title": "The Mummy"},
     { "title": "Entrapment"},
     { "title": "The Matrix"},
-    { "title": "Tea with Mussolini"}
+    { "title": "Tea with Mussolini"},
+    { "title": "The Thirteenth Floor"},
+    { "title": "Analyze This"},
+    { "title": "Never Been Kissed"},
+    { "title": "Life"},
+    { "title": "A Midsummer Nights Dream"},
+    { "title": "Election"},
+    { "title": "The Winslow Boy"},
+    { "title": "Besieged"},
+    { "title": "The Love Letter"},
+    { "title": "An Ideal Husband"}
   ]
 }
