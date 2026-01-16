@@ -1,0 +1,25 @@
+{
+  "week": "2000-07-14",
+  "movies": [
+    { "title": "X-Men"},
+    { "title": "Scary Movie"},
+    { "title": "The Perfect Storm"},
+    { "title": "The Patriot"},
+    { "title": "The Kid"},
+    { "title": "Chicken Run"},
+    { "title": "Me Myself & Irene"},
+    { "title": "Big Momma's House"},
+    { "title": "Gone in 60 Seconds"},
+    { "title": "Shaft"},
+    { "title": "Mission Impossible II"},
+    { "title": "The Adventures of Rocky & Bullwinkle"},
+    { "title": "Gladiator"},
+    { "title": "Sunshine"},
+    { "title": "Dinosaur"},
+    { "title": "Croupier"},
+    { "title": "Boys & Girls"},
+    { "title": "Shanghai Noon"},
+    { "title": "Road Trip"},
+    { "title": "U-571"}
+  ]
+}

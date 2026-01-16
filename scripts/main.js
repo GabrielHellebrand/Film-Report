@@ -2,14 +2,12 @@
 (function(){
   'use strict';
 
-  // Guard against the script running twice (helps avoid duplicate rendering)
   if(typeof window !== 'undefined' && window.__filmReportInit){
     console.warn('FilmReport: script already initialized, skipping duplicate run.');
     return;
   }
   if(typeof window !== 'undefined') window.__filmReportInit = true;
 
-  // DOM refs - will be initialized in boot()
   var box = null;
   var ul = null;
   var weekPicker = null;
@@ -19,14 +17,12 @@
 
   var WEEK_KEY = 'filmreport_selected_week';
 
-  // Movie data lookup - will be loaded from movies.json
   var movieMap = null;
   var runtimeLookup = {};
   var mpaaLookup = {};
 
   function normalizeTitle(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
 
-  // Function to load movies.json
   function loadMovieData(){
     return fetch('./data/movies.json')
       .then(function(res){
@@ -35,7 +31,6 @@
       })
       .then(function(data){
         movieMap = data;
-        // Build normalized lookup maps
         for(var key in movieMap){
           if(movieMap.hasOwnProperty(key)){
             var normalized = normalizeTitle(key);
@@ -68,6 +63,59 @@
 
     var posterWrapper = document.createElement('div');
     posterWrapper.className = 'poster-wrapper';
+    
+    // Check if movie is in collection
+    var currentUser = localStorage.getItem('currentUser');
+    var isInCollection = false;
+    if(currentUser){
+      try{
+        var collectionStr = localStorage.getItem('collection:' + currentUser);
+        var collection = collectionStr ? JSON.parse(collectionStr) : [];
+        isInCollection = collection.some(function(m){ return m.title === movie.title; });
+      }catch(e){}
+    }
+    
+    // Add click handler to toggle collection
+    posterWrapper.onclick = function(e) {
+      if(!currentUser){
+        if(confirm('Please log in to add movies to your collection. Go to My Collection page?')){
+          window.location.href = 'collection.html';
+        }
+        return;
+      }
+      
+      try{
+        var collectionKey = 'collection:' + currentUser;
+        var collectionStr = localStorage.getItem(collectionKey);
+        var collection = collectionStr ? JSON.parse(collectionStr) : [];
+        
+        var exists = collection.some(function(m){ return m.title === movie.title; });
+        
+        if(exists){
+          // Remove from collection
+          collection = collection.filter(function(m){ return m.title !== movie.title; });
+          localStorage.setItem(collectionKey, JSON.stringify(collection));
+          posterWrapper.classList.remove('in-collection');
+          alert('"' + movie.title + '" removed from your collection!');
+        } else {
+          // Add to collection
+          collection.push(movie);
+          localStorage.setItem(collectionKey, JSON.stringify(collection));
+          posterWrapper.classList.add('in-collection');
+          alert('"' + movie.title + '" added to your collection!');
+        }
+      }catch(error){
+        console.error('Toggle collection error:', error);
+        alert('Failed to update collection');
+      }
+    };
+    
+    posterWrapper.style.cursor = 'pointer';
+    
+    // Add visual indicator if in collection
+    if(isInCollection){
+      posterWrapper.classList.add('in-collection');
+    }
 
     var nowShowing = document.createElement('div');
     nowShowing.className = 'poster-now-showing';
@@ -79,7 +127,6 @@
     img.src = movie.poster || ('./images/' + (movie.title || 'no-art') + '.png');
     posterWrapper.appendChild(img);
 
-    // Create overlay for hover info
     var overlay = document.createElement('div'); 
     overlay.className = 'hover-overlay';
 
@@ -88,17 +135,14 @@
     title.textContent = movie.title || '';
     overlay.appendChild(title);
     
-    // Get normalized key for lookups
     var key = normalizeTitle(movie.title || '');
     
-    // Runtime
     var runtime = runtimeLookup.hasOwnProperty(key) ? formatRuntime(runtimeLookup[key]) : '\u2014';
     var runtimeDiv = document.createElement('div');
     runtimeDiv.className = 'overlay-line';
     runtimeDiv.innerHTML = '<strong>Runtime:</strong> ' + runtime;
     overlay.appendChild(runtimeDiv);
       
-    // Rating
     var movieRating = movie.rating || (mpaaLookup.hasOwnProperty(key) ? mpaaLookup[key] : null);
     if(movieRating){
       var ratingDiv = document.createElement('div');
@@ -107,7 +151,6 @@
       overlay.appendChild(ratingDiv);
     }
     
-    // Theaters
     if(movie.theaters){
       var theatersDiv = document.createElement('div');
       theatersDiv.className = 'overlay-line';
@@ -115,7 +158,6 @@
       overlay.appendChild(theatersDiv);
     }
     
-    // Weekend Gross
     if(movie.gross){
       var grossDiv = document.createElement('div');
       grossDiv.className = 'overlay-line';
@@ -123,7 +165,6 @@
       overlay.appendChild(grossDiv);
     }
     
-    // Total Gross
     if(movie.totalGross){
       var totalDiv = document.createElement('div');
       totalDiv.className = 'overlay-line';
@@ -131,13 +172,19 @@
       overlay.appendChild(totalDiv);
     }
     
+    // Add status indicator
+    var statusDiv = document.createElement('div');
+    statusDiv.className = 'collection-status';
+    statusDiv.style.cssText = 'width: 100%; padding: 10px; margin-top: 15px; background: ' + (isInCollection ? '#ff0000' : '#ffd700') + '; color: ' + (isInCollection ? '#fff' : '#3b0f0f') + '; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; text-align: center;';
+    statusDiv.textContent = isInCollection ? '✓ In Collection (Click to Remove)' : '+ Click to Add to Collection';
+    overlay.appendChild(statusDiv);
+    
     posterWrapper.appendChild(overlay);
     li.appendChild(posterWrapper);
     
     return li;
   }
 
-  // Function to add "Now Showing" header for grid view
   function addNowShowingHeader(){
     
   }
@@ -146,56 +193,49 @@
     if(!runtime || isNaN(runtime)) return [];
     var showtimes = [];
     
-    // Screen allocation rules based on position (1-indexed)
     var screensAllocated;
     if(position <= 3){
-      screensAllocated = 3; // #1-3 get 3 screens
+      screensAllocated = 3;
     } else if(position <= 6){
-      screensAllocated = 2; // #4-6 get 2 screens
+      screensAllocated = 2;
     } else if(position <= 12){
-      screensAllocated = 1; // #7-12 get 1 screen
+      screensAllocated = 1;
     } else if(position <= 16){
-      screensAllocated = 0.5; // #13-16 get 1/2 screen
+      screensAllocated = 0.5;
     } else if(position <= 20){
-      screensAllocated = 0.25; // #17-20 get 1/4 screen
+      screensAllocated = 0.25;
     } else {
-      screensAllocated = 0.25; // default for beyond position 20
+      screensAllocated = 0.25;
     }
     
-    // Time calculations
     var preshow = 2;
     var previews = Math.round(runtime * 0.10);
     var cleaning = 20;
     var totalShowDuration = preshow + previews + runtime + cleaning;
     
-    var startTime = 11 * 60; // 11 AM
-    var latestShowtimeStart = 23 * 60; // 11 PM
+    var startTime = 11 * 60;
+    var latestShowtimeStart = 23 * 60;
     
     var allTimes = [];
     
-    // Generate times per screen
     var numScreens = Math.ceil(screensAllocated);
     for(var screen = 0; screen < numScreens; screen++){
       var currentTime = startTime;
 
-      // Randomize first showtime between 11:00 AM and 1:00 PM (0–120 min)
       var randomOffset = Math.floor(Math.random() * 120);
       currentTime += randomOffset;
 
-      // Stagger other screens further
       if(screen > 0){
         var stagger = 15 + (screen * 20);
         currentTime += stagger;
       }
 
-      // Only enforce the start-time window (11 AM → 11 PM)
       while(currentTime <= latestShowtimeStart){
         allTimes.push(currentTime);
         currentTime += totalShowDuration;
       }
     }
     
-    // Sort & remove near-duplicates within 10 minutes
     allTimes.sort(function(a, b){ return a - b; });
     var uniqueTimes = [];
     for(var i = 0; i < allTimes.length; i++){
@@ -211,13 +251,11 @@
       }
     }
     
-    // For fractional screens, limit the number of showtimes
     if(screensAllocated < 1){
       var maxShowtimes = Math.max(1, Math.ceil(uniqueTimes.length * screensAllocated));
       uniqueTimes = uniqueTimes.slice(0, maxShowtimes);
     }
     
-    // Convert minutes → formatted time (e.g., "12:45 PM")
     for(var i = 0; i < uniqueTimes.length; i++){
       var totalMinutes = uniqueTimes[i];
       var hour = Math.floor(totalMinutes / 60);
@@ -234,11 +272,9 @@
     var li = document.createElement('li');
     li.className = 'marquee-item';
 
-    // Container for all movie info
     var infoDiv = document.createElement('div');
     infoDiv.className = 'marquee-info';
 
-    // Title + Rating (on same line) - Runtime removed
     var titleRatingDiv = document.createElement('div');
     titleRatingDiv.className = 'marquee-title-rating';
     var titleText = movie.title || '';
@@ -250,7 +286,6 @@
     titleRatingDiv.textContent = titleText;
     infoDiv.appendChild(titleRatingDiv);
 
-    // Showtimes (next row)
     var runtime = runtimeLookup.hasOwnProperty(key) ? runtimeLookup[key] : null;
     if(runtime){
         var showtimes = generateShowtimes(runtime, position);
@@ -271,16 +306,15 @@
     return li;
   }
 
-  // View variables
   var allMovies = [];
-  var currentView = 'grid'; // 'grid' or 'marquee'
+  var currentView = 'grid';
   var currentCarouselIndex = 0;
   var moviesPerPage = 4;
   
   function renderFromArray(movies){ 
     console.log('renderFromArray called with', movies.length, 'movies');
     allMovies = movies;
-    currentCarouselIndex = 0; // Reset carousel position
+    currentCarouselIndex = 0;
     if(currentView === 'grid'){
       updateGrid();
     } else {
@@ -297,46 +331,36 @@
     }
     console.log('Cleared posters, building grid...');
     
-    // Remove marquee class if present
     if(ul.classList) ul.classList.remove('marquee-view');
     
-    // Remove marquee header if present
     var existingHeader = box && box.querySelector('.marquee-header');
     if(existingHeader) existingHeader.remove();
     
-    // Remove existing carousel container if present
     var existingCarousel = box && box.querySelector('.carousel-container');
     if(existingCarousel) existingCarousel.remove();
     
-    // Add "Now Showing" header
     addNowShowingHeader();
     
-    // Create carousel container
     var carouselContainer = document.createElement('div');
     carouselContainer.className = 'carousel-container';
     
-    // Create left arrow
     var leftArrow = document.createElement('button');
     leftArrow.className = 'carousel-arrow left';
     leftArrow.innerHTML = '‹';
     leftArrow.onclick = function(){ navigateCarousel(-1); };
     carouselContainer.appendChild(leftArrow);
     
-    // Move ul into carousel container (use `box` as the canonical container)
     if(ul.parentNode) ul.parentNode.removeChild(ul);
     carouselContainer.appendChild(ul);
     
-    // Create right arrow
     var rightArrow = document.createElement('button');
     rightArrow.className = 'carousel-arrow right';
     rightArrow.innerHTML = '›';
     rightArrow.onclick = function(){ navigateCarousel(1); };
     carouselContainer.appendChild(rightArrow);
     
-    // Add carousel to the main box container
     if(box) box.appendChild(carouselContainer);
     
-    // Display first 20 movies, but only show 4 at a time
     var maxMovies = Math.min(20, allMovies.length);
     console.log('Creating', maxMovies, 'movie items');
     
@@ -349,7 +373,6 @@
     }
     console.log('Movie items added to ul, ul.children.length:', ul.children.length);
     
-    // Update arrow visibility
     updateCarouselArrows();
   }
   
@@ -361,11 +384,9 @@
     
     currentCarouselIndex += direction * moviesPerPage;
     
-    // Clamp index
     if(currentCarouselIndex < 0) currentCarouselIndex = 0;
     if(currentCarouselIndex > maxIndex) currentCarouselIndex = maxIndex;
     
-    // Show/hide movies based on current index
     var items = ul.querySelectorAll('li');
     for(var i = 0; i < items.length; i++){
       if(i >= currentCarouselIndex && i < currentCarouselIndex + moviesPerPage){
@@ -400,17 +421,14 @@
     clearPosters();
     if(!ul) return;
     
-    // Remove carousel container if present and restore `ul` into `box`
     var existingCarousel = box && box.querySelector('.carousel-container');
     if(existingCarousel){
       if(existingCarousel.parentNode) existingCarousel.parentNode.removeChild(existingCarousel);
       if(box) box.appendChild(ul);
     }
     
-    // Add marquee class
     if(ul.classList) ul.classList.add('marquee-view');
     
-    // Add Hellebrand Cinemas header as a marquee list item if not already present
     var existingHeaderLi = ul && ul.querySelector('li.marquee-header-item');
     if(!existingHeaderLi && ul){
       var headerLi = document.createElement('li');
@@ -419,7 +437,6 @@
       headerDiv.className = 'marquee-header';
       headerDiv.textContent = 'Hellebrand Cinemas 24';
       headerLi.appendChild(headerDiv);
-      // Insert as the first child of the marquee <ul> so it spans above columns
       if(ul.firstChild){
         ul.insertBefore(headerLi, ul.firstChild);
       } else {
@@ -427,7 +444,6 @@
       }
     }
     
-    // Show all 20 movies in marquee view
     var maxMovies = Math.min(20, allMovies.length);
     for(var i = 0; i < maxMovies; i++){
       ul.appendChild(createMarqueeItem(allMovies[i], i + 1));
@@ -442,7 +458,6 @@
       updateMarquee();
     }
     
-    // Update button text
     var toggleBtn = document.getElementById('toggleView');
     if(toggleBtn){
       toggleBtn.textContent = currentView === 'grid' ? 'Marquee View' : 'Grid View';
@@ -476,7 +491,6 @@
   function boot(){
     console.log('Boot function started');
     
-    // Initialize DOM references
     box = document.querySelector('.box-office');
     ul = box && box.querySelector('ul');
     weekPicker = document.getElementById('weekPicker');
@@ -486,11 +500,9 @@
     
     console.log('DOM elements:', {box: !!box, ul: !!ul, weekPicker: !!weekPicker, weekLabel: !!weekLabel});
 
-    // Set up event listeners after DOM is ready
     if(prevBtn) prevBtn.addEventListener('click', function(){ changeWeekBy(-7); });
     if(nextBtn) nextBtn.addEventListener('click', function(){ changeWeekBy(7); });
     
-    // View toggle
     var toggleViewBtn = document.getElementById('toggleView');
     if(toggleViewBtn) toggleViewBtn.addEventListener('click', toggleView);
 
@@ -512,7 +524,6 @@
 
     window.addEventListener('keydown', function(e){ if(e.key === 'ArrowLeft') changeWeekBy(-7); if(e.key === 'ArrowRight') changeWeekBy(7); });
     
-    // Load movie data first, then proceed with initialization
     console.log('Starting to load movie data...');
     loadMovieData()
       .then(function(){
@@ -554,7 +565,6 @@
       });
   }
 
-  // Wait for DOM to be ready before initializing
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', boot);
   } else {

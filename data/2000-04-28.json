@@ -1,0 +1,25 @@
+{
+  "week": "2000-04-28",
+  "movies": [
+    { "title": "U-571"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Frequency"},
+    { "title": "Where the Heart Is"},
+    { "title": "Love & Basketball"},
+    { "title": "Rules of Engagement"},
+    { "title": "Keeping the Faith"},
+    { "title": "28 Days"},
+    { "title": "Erin Brockovich"},
+    { "title": "Final Destination"},
+    { "title": "Return to Me"},
+    { "title": "Fantasia 2000"},
+    { "title": "The Road to El Dorado"},
+    { "title": "American Psycho"},
+    { "title": "High Fidelity"},
+    { "title": "The Skulls"},
+    { "title": "Gossip"},
+    { "title": "Romeo Must Die"},
+    { "title": "Where the Money Is"},
+    { "title": "Ready to Rumble"}
+  ]
+}

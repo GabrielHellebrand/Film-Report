@@ -1,0 +1,25 @@
+{
+  "week": "2000-06-30",
+  "movies": [
+    { "title": "The Perfect Storm"},
+    { "title": "The Patriot"},
+    { "title": "Me Myself & Irene"},
+    { "title": "Chicken Run"},
+    { "title": "The Adventures of Rocky & Bullwinkle"},
+    { "title": "Shaft"},
+    { "title": "Big Momma's House"},
+    { "title": "Gone in 60 Seconds"},
+    { "title": "Mission Impossible II"},
+    { "title": "Gladiator"},
+    { "title": "Dinosaur"},
+    { "title": "Boys & Girls"},
+    { "title": "Titan AE"},
+    { "title": "Shanghai Noon"},
+    { "title": "Road Trip"},
+    { "title": "Sunshine"},
+    { "title": "Croupier"},
+    { "title": "Small Time Crooks"},
+    { "title": "U-571"},
+    { "title": "The Flintstones in Viva Rock Vegas"}
+  ]
+}

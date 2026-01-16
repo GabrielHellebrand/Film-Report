@@ -1,0 +1,25 @@
+{
+  "week": "2000-08-04",
+  "movies": [
+    { "title": "Hollow Man"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Space Cowboys"},
+    { "title": "Coyote Ugly"},
+    { "title": "What Lies Beneath"},
+    { "title": "X-Men"},
+    { "title": "Scary Movie"},
+    { "title": "The Perfect Storm"},
+    { "title": "The Kid"},
+    { "title": "The Patriot"},
+    { "title": "Pokemon 2000"},
+    { "title": "Thomas & the Magic Railroad"},
+    { "title": "Chicken Run"},
+    { "title": "Loser"},
+    { "title": "Me Myself & Irene"},
+    { "title": "Gladiator"},
+    { "title": "Big Momma's House"},
+    { "title": "Mission Impossible II"},
+    { "title": "Gone in 60 Seconds"},
+    { "title": "The Adventures of Rocky & Bullwinkle"}
+  ]
+}

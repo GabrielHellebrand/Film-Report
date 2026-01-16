@@ -1,0 +1,25 @@
+{
+  "week": "2000-04-07",
+  "movies": [
+    { "title": "Rules of Engagement"},
+    { "title": "Erin Brockovich"},
+    { "title": "The Road to El Dorado"},
+    { "title": "Return to Me"},
+    { "title": "The Skulls"},
+    { "title": "Ready to Rumble"},
+    { "title": "Romeo Must Die"},
+    { "title": "High Fidelity"},
+    { "title": "Final Destination"},
+    { "title": "Black & White"},
+    { "title": "Mission to Mars"},
+    { "title": "Fantasia 2000"},
+    { "title": "The Cider House Rules"},
+    { "title": "My Dog Skip"},
+    { "title": "Here on Earth"},
+    { "title": "Price of Glory"},
+    { "title": "Boys Don't Cry"},
+    { "title": "Whatever It Takes"},
+    { "title": "The Whole Nine Yards"},
+    { "title": "The Ninth Gate"}
+  ]
+}

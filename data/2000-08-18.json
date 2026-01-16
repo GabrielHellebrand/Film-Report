@@ -1,0 +1,25 @@
+{
+  "week": "2000-08-18",
+  "movies": [
+    { "title": "The Cell"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "Space Cowboys"},
+    { "title": "The Replacements"},
+    { "title": "What Lies Beneath"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Hollow Man"},
+    { "title": "Autumn in New York"},
+    { "title": "Coyote Ugly"},
+    { "title": "Bless the Child"},
+    { "title": "Godzilla 2000"},
+    { "title": "X-Men"},
+    { "title": "The Perfect Storm"},
+    { "title": "Scary Movie"},
+    { "title": "The Kid"},
+    { "title": "Saving Grace"},
+    { "title": "The Patriot"},
+    { "title": "Chicken Run"},
+    { "title": "Thomas & the Magic Railroad"},
+    { "title": "Pokemon 2000"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "week": "2000-08-25",
+  "movies": [
+    { "title": "Bring It On"},
+    { "title": "The Art of War"},
+    { "title": "The Cell"},
+    { "title": "Space Cowboys"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "What Lies Beneath"},
+    { "title": "The Replacements"},
+    { "title": "The Crew"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Autumn in New York"},
+    { "title": "Coyote Ugly"},
+    { "title": "Hollow Man"},
+    { "title": "Bless the Child"},
+    { "title": "Godzilla 2000"},
+    { "title": "X-Men"},
+    { "title": "The Perfect Storm"},
+    { "title": "Saving Grace"},
+    { "title": "The Kid"},
+    { "title": "Scary Movie"},
+    { "title": "Chicken Run"}
+  ]
+}

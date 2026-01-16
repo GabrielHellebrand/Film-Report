@@ -17,12 +17,15 @@
             <input type="date" id="weekPicker" class="week-picker" aria-label="Pick weekend date">
             <button id="nextWeekend" aria-label="Next weekend" class="nav-arrow">›</button>
             <button id="toggleView" class="view-toggle">Marquee View</button>
+            <a href="collection.html" class="view-toggle" style="text-decoration: none; margin-left: 10px;">My Collection</a>
+            <a href="recommendations.html" class="view-toggle" style="text-decoration: none; margin-left: 10px;">Recommendations</a>
+            <a href="index.html" class="view-toggle" style="text-decoration: none; margin-left: 10px;">Homepage</a>
         </div>
         
-        <!-- Carousel Navigation - Side Arrows -->
         <ul></ul>
     </div>
+    <!-- Load collection helpers FIRST so the function is available -->
+    <script src="scripts/collection-helpers.js"></script>
     <script src="scripts/main.js"></script>
-
 </body>
 </html>

@@ -1,0 +1,25 @@
+{
+  "week": "2000-05-05",
+  "movies": [
+    { "title": "Gladiator"},
+    { "title": "U-571"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Frequency"},
+    { "title": "Where the Heart Is"},
+    { "title": "Love & Basketball"},
+    { "title": "Keeping the Faith"},
+    { "title": "Rules of Engagement"},
+    { "title": "I Dreamed of Africa"},
+    { "title": "28 Days"},
+    { "title": "Erin Brockovich"},
+    { "title": "Final Destination"},
+    { "title": "Return to Me"},
+    { "title": "The Road to El Dorado"},
+    { "title": "High Fidelity"},
+    { "title": "The Skulls"},
+    { "title": "Romeo Must Die"},
+    { "title": "American Psycho"},
+    { "title": "The Virgin Suicides"},
+    { "title": "Gossip"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "week": "2000-06-23",
+  "movies": [
+    { "title": "Me Myself & Irene"},
+    { "title": "Chicken Run"},
+    { "title": "Shaft"},
+    { "title": "Gone in 60 Seconds"},
+    { "title": "Big Momma's House"},
+    { "title": "Mission Impossible II"},
+    { "title": "Gladiator"},
+    { "title": "Titan AE"},
+    { "title": "Dinosaur"},
+    { "title": "Boys & Girls"},
+    { "title": "Shanghai Noon"},
+    { "title": "Road Trip"},
+    { "title": "Small Time Crooks"},
+    { "title": "Frequency"},
+    { "title": "U-571"},
+    { "title": "Sunshine"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Croupier"},
+    { "title": "Erin Brockovich"},
+    { "title": "Keeping the Faith"}
+  ]
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Report - Recommendations</title>
+    <link rel="stylesheet" href="styles/collection.css">
+    <style>
+        .recommendation-card {
+            background: rgba(0,0,0,0.8);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+        }
+
+        .recommendation-score {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #3b0f0f;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .recommendation-reasons {
+            padding: 15px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .recommendation-reasons ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .recommendation-reasons li {
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .recommendation-reasons li:last-child {
+            border-bottom: none;
+        }
+
+        .filter-section {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 2px solid #ffd700;
+        }
+
+        .filter-section h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: rgba(255,215,0,0.2);
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #ffd700;
+            color: #3b0f0f;
+        }
+
+        .no-recommendations {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .no-recommendations h3 {
+            color: #ffd700;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Film Report</h1>
+            <div class="nav-links">
+                <a href="index.html">Box Office</a>
+                <a href="collection.html">My Collection</a>
+                <a href="recommendations.html">Recommendations</a>
+            </div>
+        </div>
+
+        <div id="authRequired" class="auth-container">
+            <h2>Login Required</h2>
+            <p style="color: #f3e9e9; text-align: center; margin-bottom: 20px;">
+                Please log in to get personalized movie recommendations.
+            </p>
+            <a href="collection.html" class="btn" style="text-decoration: none; display: block; text-align: center;">
+                Go to Login
+            </a>
+        </div>
+
+        <div id="recommendationsSection" class="hidden">
+            <div class="user-info">
+                <h2>Recommendations for <span id="currentUsername"></span></h2>
+                <button class="logout-btn" onclick="handleLogout()">Logout</button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Filter by Rating</h3>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-rating="all">All Ratings</button>
+                    <button class="filter-btn" data-rating="G">G</button>
+                    <button class="filter-btn" data-rating="PG">PG</button>
+                    <button class="filter-btn" data-rating="PG-13">PG-13</button>
+                    <button class="filter-btn" data-rating="R">R</button>
+                </div>
+            </div>
+
+            <div id="recommendationsContainer">
+                <h2 style="color: #ffd700; margin-bottom: 20px;">Your Personalized Recommendations</h2>
+                <div id="recommendationsGrid" class="collection-grid"></div>
+                <div id="noRecommendations" class="no-recommendations hidden">
+                    <h3>No recommendations yet!</h3>
+                    <p>Add more movies to your collection and rate them to get personalized recommendations.</p>
+                    <p><a href="collection.html" style="color: #ffd700;">Go to My Collection</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/recommendations.js"></script>
+</body>
+</html>

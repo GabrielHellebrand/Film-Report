@@ -1,0 +1,25 @@
+{
+  "week": "2000-05-19",
+  "movies": [
+    { "title": "Dinosaur"},
+    { "title": "Gladiator"},
+    { "title": "Road Trip"},
+    { "title": "U-571"},
+    { "title": "Frequency"},
+    { "title": "Battlefield Earth"},
+    { "title": "Small Time Crooks"},
+    { "title": "Center Stage"},
+    { "title": "Where the Heart Is"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Screwed"},
+    { "title": "Love & Basketball"},
+    { "title": "Rules of Engagement"},
+    { "title": "Keeping the Faith"},
+    { "title": "Erin Brockovich"},
+    { "title": "Held Up"},
+    { "title": "The Big Kahuna"},
+    { "title": "Final Destination"},
+    { "title": "Return to Me"},
+    { "title": "The Virgin Suicides"}
+  ]
+}

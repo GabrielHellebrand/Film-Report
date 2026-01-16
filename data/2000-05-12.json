@@ -1,0 +1,25 @@
+{
+  "week": "2000-05-12",
+  "movies": [
+    { "title": "Gladiator"},
+    { "title": "Battlefield Earth"},
+    { "title": "U-571"},
+    { "title": "Frequency"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Center Stage"},
+    { "title": "Where the Heart Is"},
+    { "title": "Screwed"},
+    { "title": "Love & Basketball"},
+    { "title": "Held Up"},
+    { "title": "Keeping the Faith"},
+    { "title": "Rules of Engagement"},
+    { "title": "Erin Brockovich"},
+    { "title": "I Dreamed of Africa"},
+    { "title": "28 Days"},
+    { "title": "Return to Me"},
+    { "title": "Final Destination"},
+    { "title": "The Road to El Dorado"},
+    { "title": "The Virgin Suicides"},
+    { "title": "High Fidelity"}
+  ]
+}

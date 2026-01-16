@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Report - My Collection</title>
+    <link rel="stylesheet" href="styles/collection.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Film Report</h1>
+            <div class="nav-links">
+                <a href="index.html">Box Office</a>
+                <a href="collection.html">My Collection</a>
+                <a href="recommendations.html">Recommendations</a>
+            </div>
+        </div>
+
+        <!-- Auth Section -->
+        <div id="authSection">
+            <div class="auth-container">
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <div id="loginError" class="error-message hidden"></div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="loginUsername" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter password">
+                    </div>
+                    <button class="btn" onclick="handleLogin()">Login</button>
+                    <div class="auth-toggle">
+                        Don't have an account? <a onclick="toggleAuthForm()">Sign up</a>
+                    </div>
+                </div>
+
+                <div id="signupForm" class="hidden">
+                    <h2>Sign Up</h2>
+                    <div id="signupError" class="error-message hidden"></div>
+                    <div id="signupSuccess" class="success-message hidden"></div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="signupUsername" placeholder="Choose username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="signupPassword" placeholder="Choose password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="signupPasswordConfirm" placeholder="Confirm password">
+                    </div>
+                    <button class="btn" onclick="handleSignup()">Sign Up</button>
+                    <div class="auth-toggle">
+                        Already have an account? <a onclick="toggleAuthForm()">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection Section -->
+        <div id="collectionSection" class="hidden">
+            <div class="user-info">
+                <h2>Welcome, <span id="currentUsername"></span>!</h2>
+                <button class="logout-btn" onclick="handleLogout()">Logout</button>
+            </div>
+
+            <div id="collectionContainer">
+                <h2 style="color: #ffd700; margin-bottom: 20px;">My Collection</h2>
+                <div id="collectionGrid" class="collection-grid"></div>
+                <div id="emptyCollection" class="empty-state hidden">
+                    <h3>Your collection is empty</h3>
+                    <p>Visit the <a href="index.html" style="color: #ffd700;">Box Office</a> page to add movies!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="reviewMovieTitle"></h2>
+                <button class="close-modal" onclick="closeReviewModal()">×</button>
+            </div>
+
+            <div id="reviewForm">
+                <h3 style="color: #ffd700; margin-bottom: 15px;">Add Your Review</h3>
+                <div class="rating-input" id="ratingStars">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+                <div class="form-group">
+                    <label>Your Review</label>
+                    <textarea id="reviewText" placeholder="Write your review here..."></textarea>
+                </div>
+                <button class="btn" onclick="submitReview()">Submit Review</button>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
+                <h3 style="color: #ffd700; margin-bottom: 15px;">All Reviews</h3>
+                <div id="reviewsContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/collection.js"></script>
+</body>
+</html>

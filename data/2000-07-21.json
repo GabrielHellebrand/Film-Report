@@ -1,0 +1,25 @@
+{
+  "week": "2000-07-21",
+  "movies": [
+    { "title": "What Lies Beneath"},
+    { "title": "X-Men"},
+    { "title": "Pokemon 2000"},
+    { "title": "Scary Movie"},
+    { "title": "The Perfect Storm"},
+    { "title": "The Kid"},
+    { "title": "The Patriot"},
+    { "title": "Loser"},
+    { "title": "Chicken Run"},
+    { "title": "Me Myself & Irene"},
+    { "title": "Big Momma's House"},
+    { "title": "The in Crowd"},
+    { "title": "Mission Impossible II"},
+    { "title": "Gone in 60 Seconds"},
+    { "title": "Shaft"},
+    { "title": "Gladiator"},
+    { "title": "The Adventures of Rocky & Bullwinkle"},
+    { "title": "Sunshine"},
+    { "title": "Croupier"},
+    { "title": "U-571"}
+  ]
+}

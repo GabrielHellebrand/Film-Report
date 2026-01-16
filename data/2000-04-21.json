@@ -1,0 +1,25 @@
+{
+  "week": "2000-04-21",
+  "movies": [
+    { "title": "U-571"},
+    { "title": "Love & Basketball"},
+    { "title": "Rules of Engagement"},
+    { "title": "28 Days"},
+    { "title": "Keeping the Faith"},
+    { "title": "Erin Brockovich"},
+    { "title": "The Road to El Dorado"},
+    { "title": "Return to Me"},
+    { "title": "Final Destination"},
+    { "title": "The Skulls"},
+    { "title": "American Psycho"},
+    { "title": "Gossip"},
+    { "title": "High Fidelity"},
+    { "title": "Fantasia 2000"},
+    { "title": "Romeo Must Die"},
+    { "title": "Where the Money Is"},
+    { "title": "Ready to Rumble"},
+    { "title": "My Dog Skip"},
+    { "title": "Mission to Mars"},
+    { "title": "The Cider House Rules"}
+  ]
+}

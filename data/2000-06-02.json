@@ -1,0 +1,25 @@
+{
+  "week": "2000-06-02",
+  "movies": [
+    { "title": "Mission Impossible II"},
+    { "title": "Big Momma's House"},
+    { "title": "Dinosaur"},
+    { "title": "Shanghai Noon"},
+    { "title": "Gladiator"},
+    { "title": "Road Trip"},
+    { "title": "Frequency"},
+    { "title": "Small Time Crooks"},
+    { "title": "U-571"},
+    { "title": "Center Stage"},
+    { "title": "Where the Heart Is"},
+    { "title": "The Flintstones in Viva Rock Vegas"},
+    { "title": "Erin Brockovich"},
+    { "title": "Love & Basketball"},
+    { "title": "Rules of Engagement"},
+    { "title": "Keeping the Faith"},
+    { "title": "The Big Kahuna"},
+    { "title": "East is East"},
+    { "title": "The Virgin Suicides"},
+    { "title": "Battlefield Earth"}
+  ]
+}
