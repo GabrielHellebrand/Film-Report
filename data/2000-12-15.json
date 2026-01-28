@@ -1,0 +1,25 @@
+{
+  "week": "2000-12-15",
+  "movies": [
+    { "title": "What Women Want"},
+    { "title": "Dude Where's My Car"},
+    { "title": "How the Grinch Stole Christmas"},
+    { "title": "The Emperor's New Groove"},
+    { "title": "Vertical Limit"},
+    { "title": "Proof of Life"},
+    { "title": "Unbreakable"},
+    { "title": "102 Dalmatians"},
+    { "title": "Dungeons & Dragons"},
+    { "title": "Rugrats in Paris"},
+    { "title": "Meet the Parents"},
+    { "title": "Charlie's Angels"},
+    { "title": "Crouching Tiger Hidden Dragon"},
+    { "title": "Bounce"},
+    { "title": "Men of Honor"},
+    { "title": "Billy Elliot"},
+    { "title": "Quills"},
+    { "title": "The 6th Day"},
+    { "title": "You Can Count on Me"},
+    { "title": "Best in Show"}
+  ]
+}

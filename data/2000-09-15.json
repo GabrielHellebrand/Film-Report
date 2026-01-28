@@ -1,0 +1,25 @@
+{
+  "week": "2000-09-15",
+  "movies": [
+    { "title": "The Watcher"},
+    { "title": "Bait"},
+    { "title": "Bring It On"},
+    { "title": "Nurse Betty"},
+    { "title": "Space Cowboys"},
+    { "title": "The Cell"},
+    { "title": "What Lies Beneath"},
+    { "title": "Almost Famous"},
+    { "title": "Duets"},
+    { "title": "The Art of War"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "The Replacements"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "The Way of the Gun"},
+    { "title": "Highlander Endgame"},
+    { "title": "Coyote Ugly"},
+    { "title": "Autumn in New York"},
+    { "title": "Saving Grace"},
+    { "title": "The Crew"},
+    { "title": "The Perfect Storm"}
+  ]
+}

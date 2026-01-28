@@ -1,0 +1,25 @@
+{
+  "week": "2000-11-10",
+  "movies": [
+    { "title": "Charlie's Angels"},
+    { "title": "Little Nicky"},
+    { "title": "Men of Honor"},
+    { "title": "Meet the Parents"},
+    { "title": "Red Planet"},
+    { "title": "The Legend of Bagger Vance"},
+    { "title": "Remember the Titans"},
+    { "title": "Pay it Forward"},
+    { "title": "Billy Elliot"},
+    { "title": "Bedazzled"},
+    { "title": "The Little Vampire"},
+    { "title": "Book of Shadows Blair Witch II"},
+    { "title": "Best in Show"},
+    { "title": "Drunken Master II"},
+    { "title": "Lucky Numbers"},
+    { "title": "The Contender"},
+    { "title": "Almost Famous"},
+    { "title": "Requiem for a Dream"},
+    { "title": "Dr T & the Women"},
+    { "title": "Bring It On"}
+  ]
+}

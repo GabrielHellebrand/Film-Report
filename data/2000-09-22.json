@@ -1,0 +1,25 @@
+{
+  "week": "2000-09-22",
+  "movies": [
+    { "title": "Urban Legends Final Cut"},
+    { "title": "The Exorcist"},
+    { "title": "Almost Famous"},
+    { "title": "Bring It On"},
+    { "title": "The Watcher"},
+    { "title": "Bait"},
+    { "title": "Nurse Betty"},
+    { "title": "What Lies Beneath"},
+    { "title": "Space Cowboys"},
+    { "title": "Woman on Top"},
+    { "title": "The Cell"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "The Replacements"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "Duets"},
+    { "title": "The Art of War"},
+    { "title": "Coyote Ugly"},
+    { "title": "Saving Grace"},
+    { "title": "Autumn in New York"},
+    { "title": "Highlander Endgame"}
+  ]
+}

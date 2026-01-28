@@ -1,0 +1,25 @@
+{
+  "week": "2000-11-17",
+  "movies": [
+    { "title": "How the Grinch Stole Christmas"},
+    { "title": "Rugrats in Paris"},
+    { "title": "Charlie's Angels"},
+    { "title": "The 6th Day"},
+    { "title": "Bounce"},
+    { "title": "Men of Honor"},
+    { "title": "Little Nicky"},
+    { "title": "Meet the Parents"},
+    { "title": "Red Planet"},
+    { "title": "The Legend of Bagger Vance"},
+    { "title": "Remember the Titans"},
+    { "title": "Billy Elliot"},
+    { "title": "Pay it Forward"},
+    { "title": "Best in Show"},
+    { "title": "Bedazzled"},
+    { "title": "Book of Shadows Blair Witch II"},
+    { "title": "You Can Count on Me"},
+    { "title": "Lucky Numbers"},
+    { "title": "Requiem for a Dream"},
+    { "title": "The Little Vampire"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "week": "2000-10-13",
+  "movies": [
+    { "title": "Meet the Parents"},
+    { "title": "Remember the Titans"},
+    { "title": "Lost Souls"},
+    { "title": "The Ladies Man"},
+    { "title": "The Contender"},
+    { "title": "The Exorcist"},
+    { "title": "Dr T & the Women"},
+    { "title": "Get Carter"},
+    { "title": "Almost Famous"},
+    { "title": "Best in Show"},
+    { "title": "Digimon The Movie"},
+    { "title": "Bring It On"},
+    { "title": "Urban Legends Final Cut"},
+    { "title": "What Lies Beneath"},
+    { "title": "Space Cowboys"},
+    { "title": "Nurse Betty"},
+    { "title": "Dancer in the Dark"},
+    { "title": "The Watcher"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Bait"}
+  ]
+}

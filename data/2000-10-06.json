@@ -1,0 +1,25 @@
+{
+  "week": "2000-10-06",
+  "movies": [
+    { "title": "Meet the Parents"},
+    { "title": "Remember the Titans"},
+    { "title": "Get Carter"},
+    { "title": "The Exorcist"},
+    { "title": "Digimon The Movie"},
+    { "title": "Almost Famous"},
+    { "title": "Urban Legends Final Cut"},
+    { "title": "Bring It On"},
+    { "title": "The Watcher"},
+    { "title": "Nurse Betty"},
+    { "title": "What Lies Beneath"},
+    { "title": "Space Cowboys"},
+    { "title": "Best in Show"},
+    { "title": "Bait"},
+    { "title": "Beautiful"},
+    { "title": "Dancer in the Dark"},
+    { "title": "The Cell"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Woman on Top"}
+  ]
+}

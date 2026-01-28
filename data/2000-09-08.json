@@ -1,0 +1,25 @@
+{
+  "week": "2000-09-08",
+  "movies": [
+    { "title": "The Watcher"},
+    { "title": "Nurse Betty"},
+    { "title": "Bring It On"},
+    { "title": "The Cell"},
+    { "title": "Space Cowboys"},
+    { "title": "What Lies Beneath"},
+    { "title": "The Art of War"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "The Way of the Gun"},
+    { "title": "Highlander Endgame"},
+    { "title": "The Replacements"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "Autumn in New York"},
+    { "title": "Coyote Ugly"},
+    { "title": "Saving Grace"},
+    { "title": "The Crew"},
+    { "title": "Bless the Child"},
+    { "title": "Hollow Man"},
+    { "title": "The Perfect Storm"},
+    { "title": "Whipped"}
+  ]
+}

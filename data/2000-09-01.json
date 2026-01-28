@@ -1,0 +1,25 @@
+{
+  "week": "2000-09-01",
+  "movies": [
+    { "title": "Bring It On"},
+    { "title": "The Cell"},
+    { "title": "Space Cowboys"},
+    { "title": "The Art of War"},
+    { "title": "Highlander Endgame"},
+    { "title": "What Lies Beneath"},
+    { "title": "The Original Kings of Comedy"},
+    { "title": "The Replacements"},
+    { "title": "Nutty Professor II The Klumps"},
+    { "title": "The Crew"},
+    { "title": "Autumn in New York"},
+    { "title": "Saving Grace"},
+    { "title": "Coyote Ugly"},
+    { "title": "Whipped"},
+    { "title": "Hollow Man"},
+    { "title": "Bless the Child"},
+    { "title": "The Perfect Storm"},
+    { "title": "X-Men"},
+    { "title": "Godzilla 2000"},
+    { "title": "The Kid"}
+  ]
+}

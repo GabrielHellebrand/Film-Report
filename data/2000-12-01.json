@@ -1,0 +1,25 @@
+{
+  "week": "2000-12-01",
+  "movies": [
+    { "title": "How the Grinch Stole Christmas"},
+    { "title": "Unbreakable"},
+    { "title": "102 Dalmatians"},
+    { "title": "Rugrats in Paris"},
+    { "title": "Charlie's Angels"},
+    { "title": "Bounce"},
+    { "title": "Men of Honor"},
+    { "title": "The 6th Day"},
+    { "title": "Meet the Parents"},
+    { "title": "Little Nicky"},
+    { "title": "Billy Elliot"},
+    { "title": "The Legend of Bagger Vance"},
+    { "title": "Remember the Titans"},
+    { "title": "Red Planet"},
+    { "title": "Best in Show"},
+    { "title": "You Can Count on Me"},
+    { "title": "Pay it Forward"},
+    { "title": "Bedazzled"},
+    { "title": "Requiem for a Dream"},
+    { "title": "Quills"}
+  ]
+}

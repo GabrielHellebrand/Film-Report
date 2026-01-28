@@ -194,25 +194,18 @@
     var showtimes = [];
     
     var screensAllocated;
-    if(position <= 3){
-      screensAllocated = 3;
-    } else if(position <= 6){
+    if(position <= 4){
       screensAllocated = 2;
-    } else if(position <= 12){
-      screensAllocated = 1;
-    } else if(position <= 16){
-      screensAllocated = 0.5;
     } else if(position <= 20){
-      screensAllocated = 0.25;
+      screensAllocated = 1;
     } else {
-      screensAllocated = 0.25;
+      screensAllocated = 1;
     }
     
     var preshow = 2;
     var previews = Math.round(runtime * 0.10);
     var cleaning = 20;
     var totalShowDuration = preshow + previews + runtime + cleaning;
-    
     var startTime = 11 * 60;
     var latestShowtimeStart = 23 * 60;
     
